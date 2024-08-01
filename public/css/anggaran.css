@@ -1,0 +1,169 @@
+body {
+  font-weight: 500;
+}
+
+.tabel-anggaran {
+  background-image: linear-gradient(#003d81, #000d1b);
+  width: 30%;
+  text-align: center;
+  color: white;
+  height: 59px;
+}
+
+.tabel-anggaran h5 {
+  background-color: #ffd600;
+  height: 22px;
+}
+
+.container-tabel-anggaran {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: row;
+  margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+  .container-tabel-anggaran {
+    display: inline-table;
+    width: 100%;
+    margin: auto;
+  }
+
+  .tabel-anggaran {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.jumlah-pendapatan {
+  margin: 40px;
+  text-align: center;
+}
+
+.jumlah-pendapatan h2 {
+  color: black;
+}
+
+.container-jumlah-pendapatan {
+  display: flex;
+  justify-content: center;
+}
+
+.tabel-jumlah-pendapatan {
+  background-image: linear-gradient(#003d81, #000d1b);
+  font-size: 40px;
+  color: white;
+  padding: 0px 50px 0px 50px;
+  border-radius: 10px;
+}
+
+.container-belanja-desa {
+  background-color: #ededed;
+}
+
+.tabel-belanja-desa {
+  background-image: linear-gradient(#003d81, #000d1b);
+  color: white;
+  font-size: 34px;
+  width: 30%;
+  text-align: center;
+}
+
+.container-tabel-atas {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+.container-tabel-bawah {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+@media (max-width: 476px) {
+  .container-tabel-atas {
+    display: inline-table;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tabel-belanja-desa {
+    width: 100%;
+  }
+
+  .container-tabel-bawah {
+    display: inline-table;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.tabel-belanja-desa h5 {
+  background-color: #ffd600;
+  height: 22px;
+}
+
+.tabel-penerima-pembiayaan {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin: 41px;
+}
+
+.tabel-pembiayaan {
+  background-image: linear-gradient(#000d1b, #003d81);
+  height: 122px;
+  width: 50%;
+}
+
+@media (max-width: 476px) {
+  .tabel-penerima-pembiayaan {
+    display: inline-table;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tabel-pembiayaan {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.tabel-pembiayaan h5 {
+  background-color: #ffd600;
+  height: 43px;
+  text-align: center;
+  padding: 10px;
+  color: black;
+}
+
+.container-pdf-apbd {
+  display: flex;
+  justify-content: center;
+  gap: 98px;
+  margin: 43px;
+}
+
+.pdf-apbd {
+  width: 210px;
+  height: 297px;
+  background-color: blue;
+  width: 210px;
+  height: 297px;
+  background-color: blue;
+}
+
+@media (max-width: 476px) {
+  .container-pdf-apbd {
+    display: grid;
+    place-items: center;
+    margin: auto;
+  }
+}

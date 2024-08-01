@@ -1,0 +1,130 @@
+.container h4 {
+  color: black;
+}
+
+.container p {
+  color: black;
+  font-weight: 500;
+}
+
+.container ol li {
+  color: black;
+  font-weight: 500;
+}
+
+.tombol-selengkapnya {
+  background-color: #ffd600;
+  width: 30%;
+  margin: 20px auto 0px;
+  padding: 4px;
+  border-radius: 50px;
+}
+
+.tombol-selengkapnya a {
+  color: black;
+  font-weight: 500;
+}
+
+.kotak-wilayah h5 {
+  background-color: #ffd600;
+  font-weight: 500;
+}
+
+.kotak-wilayah ul li {
+  color: white;
+  list-style: none;
+}
+
+.section-demografi {
+  background-color: #ededed;
+}
+
+.kotak-wilayah .luas-wilayah h5 {
+  border-radius: 10px 10px 0px 0px;
+  margin: 10px;
+}
+
+.section-demografi .kotak-wilayah .luas-wilayah {
+  background-image: linear-gradient(#000d1b, #003d81);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.kotak-wilayah .list-luas-wilayah {
+  display: flex;
+}
+
+.section-demografi .kotak-wilayah .orbitasi h5 {
+  margin: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.section-demografi .kotak-wilayah .orbitasi {
+  background-image: linear-gradient(#000d1b, #003d81);
+  border-radius: 10px;
+}
+
+.orbitasi .list-orbitasi {
+  display: flex;
+}
+
+.kotak-wilayah .batas-jumlah-wilayah {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.kotak-wilayah .batas-jumlah-wilayah .batas-dan-penduduk {
+  width: 50%;
+}
+
+.kotak-wilayah .batas-wilayah {
+  background-image: linear-gradient(#000d1b, #003d81);
+  border-radius: 10px;
+  position: relative;
+}
+
+.kotak-wilayah .batas-wilayah h5 {
+  margin: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.kotak-wilayah .batas-wilayah .list-batas-wilayah {
+  display: flex;
+}
+
+.kotak-wilayah .jumlah-penduduk {
+  background-image: linear-gradient(#000d1b, #003d81);
+  border-radius: 10px;
+}
+
+.kotak-wilayah .jumlah-penduduk h5 {
+  margin: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.kotak-wilayah .jumlah-penduduk .list-jumlah-penduduk {
+  display: flex;
+}
+
+
+@media (max-width: 476px) {
+  .kotak-wilayah .batas-jumlah-wilayah {
+    display: inline-table;
+    width: 100%;
+  }
+
+  .batas-wilayah {
+    width: 100%;
+  }
+
+  .section-demografi .kotak-wilayah .luas-wilayah {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .kotak-wilayah .batas-jumlah-wilayah .batas-dan-penduduk {
+    width: 100%;
+  }
+
+}
