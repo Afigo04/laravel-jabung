@@ -36,4 +36,5 @@
             bernama Hasan Mukmin yang merupakan keturunan keluarga Kyai Hasan Besari, jadilah Desa itu dinamakan Jabung.
         </div>
     </main>
-    @include('layouts.footer')
+
+@include('layouts.footer')

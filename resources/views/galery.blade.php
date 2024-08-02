@@ -1,6 +1,5 @@
 @include('layouts.header')
 
-
-    <main class="main"></main>
+<main class="main"></main>
 
 @include('layouts.footer')

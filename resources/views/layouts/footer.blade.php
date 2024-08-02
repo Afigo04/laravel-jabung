@@ -12,7 +12,7 @@
                     <img src="{{asset('img/fb-logo.png')}}" alt="facebook" />
                 </a>
                 <a href="#">
-                    <img src="{{asset('img/ytb.png')}}" alt="youtube" />
+                    <img src="{{asset('img/ytb-logo.png')}}" alt="youtube" />
                 </a>
             </div>
             <p class="text-white text-center mb-0 mt-2">JABUNG.GO.ID</p>
