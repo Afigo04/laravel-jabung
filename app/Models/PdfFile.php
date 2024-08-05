@@ -6,13 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class PdfFinance extends Model
+class PdfFile extends Model
 {
+    use HasFactory;
+
     use HasFactory;
 
     protected $fillable = [
         'name',
-        'path'
+        'path',
+        'pdf_category_id'
     ];
 
     public function pdfCategory(): BelongsTo

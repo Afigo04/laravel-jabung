@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pdf_categories', function (Blueprint $table) {
+        Schema::create('pdf_files', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('path');
+            $table->foreignId("pdf_category_id")->references('id')->on('pdf_categories')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pdf_categories');
+        Schema::dropIfExists('pdf_finances');
     }
 };

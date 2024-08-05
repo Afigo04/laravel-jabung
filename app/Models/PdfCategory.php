@@ -16,6 +16,6 @@ class PdfCategory extends Model
 
     public function pdfFinance(): HasMany
     {
-        return $this->hasMany(PdfFinance::class, 'id');
+        return $this->hasMany(PdfFile::class, 'id');
     }
 }

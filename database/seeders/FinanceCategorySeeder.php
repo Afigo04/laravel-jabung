@@ -13,16 +13,16 @@ class FinanceCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('financial_categories')->insert([
+        DB::table('finance_categories')->insert([
             'name' => "Pendapatan Desa"
         ]);
-        DB::table('financial_categories')->insert([
+        DB::table('finance_categories')->insert([
             'name' => "Belanja Desa"
         ]);
-        DB::table('financial_categories')->insert([
+        DB::table('finance_categories')->insert([
             'name' => "Pembiayaan Desa"
         ]);
-        DB::table('financial_categories')->insert([
+        DB::table('finance_categories')->insert([
             'name' => "SILPA Desa"
         ]);
     }

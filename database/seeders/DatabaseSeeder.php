@@ -19,7 +19,5 @@ class DatabaseSeeder extends Seeder
             FinanceCategorySeeder::class,
             PdfCategorySeeder::class,
         ]);
-
-        News::factory(15)->create();
     }
 }
