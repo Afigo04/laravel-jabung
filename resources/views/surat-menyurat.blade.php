@@ -1,15 +1,13 @@
 @include('layouts.header')
 
 <main class="main">
-  <!-- Page Title -->
-  <div class="page-title dark-background background-gunung">
-    <div class="container position-relative p-5">
-      <h1 class="fs-1" style="font-family: 'Poppins', sans-serif; position: relative; z-index: 9">
-        Surat Menyurat
-      </h1>
-    </div>
-  </div>
-  <!-- End Page Title -->
+  <!-- Hero Gunung -->
+  <x-hero-gunung title="Surat Menyurat">
+    <h1 class="fs-1" style="font-family: 'Poppins', sans-serif; position: relative; z-index: 9">
+      Surat Menyurat
+    </h1>
+  </x-hero-gunung>
+  <!-- End Hero Gunung -->
 
   <!-- Services Section -->
   <section id="services" class="services section light-background">

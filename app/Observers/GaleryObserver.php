@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Galery;
+use Illuminate\Support\Facades\Storage;
 
 class GaleryObserver
 {
@@ -19,7 +20,9 @@ class GaleryObserver
      */
     public function updated(Galery $galery): void
     {
-        //
+        if ($galery->isDirty('photo_path')) {
+            Storage::disk('public')->delete($galery->getOriginal('photo_path'));
+        }
     }
 
     /**
@@ -27,7 +30,9 @@ class GaleryObserver
      */
     public function deleted(Galery $galery): void
     {
-        //
+        if (!is_null($galery->photo_path)) {
+            Storage::disk('public')->delete($galery->photo_path);
+        }
     }
 
     /**

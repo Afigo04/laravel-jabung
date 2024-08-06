@@ -9,4 +9,6 @@ use Filament\Resources\Pages\CreateRecord;
 class CreatePdfFile extends CreateRecord
 {
     protected static string $resource = PdfFileResource::class;
+    protected static ?string $title = 'Tambah Berkas';
+
 }

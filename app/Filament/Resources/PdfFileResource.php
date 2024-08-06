@@ -18,18 +18,24 @@ class PdfFileResource extends Resource
     protected static ?string $model = PdfFile::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Berkas';
+    protected static ?string $navigationGroup = 'Dokumen';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label("Nama")
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('path'),
+                Forms\Components\FileUpload::make('path')
+                    ->label("Berkas"),
                 Forms\Components\Select::make('pdf_category_id')
+                    ->label("Kategori Berkas")
                     ->relationship('pdfCategory', 'name')
                     ->required(),
+
             ]);
     }
 
@@ -38,10 +44,13 @@ class PdfFileResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Nama")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('path')
+                    ->label("Berkas")
                     ->searchable(),
-                Tables\Columns\TextColumn::make('pdf_category_id')
+                Tables\Columns\TextColumn::make('pdfCategory.name')
+                    ->label("Kategori Berkas")
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')

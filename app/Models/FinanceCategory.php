@@ -11,12 +11,12 @@ class FinanceCategory extends Model
 {
     use HasFactory;
 
-    public function VillageIncomes(): HasMany
-    {
-        return $this->hasMany(Finance::class);
-    }
-
     protected $fillable = [
         'name'
     ];
+
+    public function finances(): HasMany
+    {
+        return $this->hasMany(Finance::class);
+    }
 }

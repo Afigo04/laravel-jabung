@@ -9,11 +9,11 @@ use Filament\Resources\Pages\ListRecords;
 class ListFinances extends ListRecords
 {
     protected static string $resource = FinanceResource::class;
-
+    protected static ?string $title = 'List Pendapatan';
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+            Actions\CreateAction::make()->label("Tambah Pendapatan"),
         ];
     }
 }

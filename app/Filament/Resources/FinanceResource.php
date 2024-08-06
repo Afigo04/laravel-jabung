@@ -18,20 +18,31 @@ class FinanceResource extends Resource
 {
     protected static ?string $model = Finance::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
+
+    protected static ?string $navigationLabel = 'Pendapatan';
+    protected static ?string $navigationGroup = 'Pendapatan';
+
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label("Nama")
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('amount')
+                    ->label("Jumlah")
                     ->required()
                     ->numeric(),
                 Forms\Components\Select::make('finance_category_id')
-                    ->options(FinanceCategory::all()->pluck('name', 'id'))
+                    ->label("Kategori Pendapatan")
+                    ->options(FinanceCategory::all()->pluck('name', 'id')),
+                Forms\Components\TextInput::make('year')
+                    ->label("Tahun")
+                    ->required()
+                    ->numeric()
             ]);
     }
 
@@ -40,12 +51,17 @@ class FinanceResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Nama")
                     ->searchable(),
                 Tables\Columns\TextColumn::make('amount')
+                    ->label("Jumlah")
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('finance_category')
+                Tables\Columns\TextColumn::make('category.name')
+                    ->label("Kategori Pendapatan")
                     ->sortable(),
+                Tables\Columns\TextColumn::make('year')
+                    ->label("Tahun"),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

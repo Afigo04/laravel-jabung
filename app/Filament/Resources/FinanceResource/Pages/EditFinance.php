@@ -9,7 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditFinance extends EditRecord
 {
     protected static string $resource = FinanceResource::class;
-
+    protected static ?string $title = 'Edit Pendapatan';
     protected function getHeaderActions(): array
     {
         return [

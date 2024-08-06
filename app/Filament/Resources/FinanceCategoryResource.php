@@ -16,14 +16,16 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class FinanceCategoryResource extends Resource
 {
     protected static ?string $model = FinanceCategory::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Kategori Pendapatan';
+    protected static ?string $navigationGroup = 'Pendapatan';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label("Nama")
                     ->required()
                     ->maxLength(255),
             ]);
@@ -34,6 +36,7 @@ class FinanceCategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Nama")
                     ->searchable(),
             ])
             ->filters([

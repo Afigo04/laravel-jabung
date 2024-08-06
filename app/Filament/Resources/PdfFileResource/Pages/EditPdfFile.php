@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditPdfFile extends EditRecord
 {
     protected static string $resource = PdfFileResource::class;
+    protected static ?string $title = 'Edit Berkas';
 
     protected function getHeaderActions(): array
     {

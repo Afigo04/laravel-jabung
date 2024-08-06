@@ -14,9 +14,11 @@ class Finance extends Model
         'name',
         'amount',
         'finance_category_id',
+        'year'
     ];
 
-    public function category(): BelongsTo {
-        return $this->belongsTo(FinanceCategory::class);
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(FinanceCategory::class, 'finance_category_id');
     }
 }

@@ -20,6 +20,6 @@ class PdfFile extends Model
 
     public function pdfCategory(): BelongsTo
     {
-        return $this->belongsTo(PdfCategory::class, 'id');
+        return $this->belongsTo(PdfCategory::class, 'pdf_category_id');
     }
 }

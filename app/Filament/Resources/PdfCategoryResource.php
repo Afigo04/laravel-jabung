@@ -19,7 +19,7 @@ class PdfCategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Kategori Berkas';
-
+    protected static ?string $navigationGroup = 'Dokumen';
     public static function form(Form $form): Form
     {
         return $form
@@ -35,6 +35,7 @@ class PdfCategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Nama")
                     ->searchable(),
             ])
             ->filters([

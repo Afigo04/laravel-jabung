@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->integer("amount");
             $table->foreignId("finance_category_id")->references('id')->on('finance_categories')->onDelete('cascade');
+            $table->integer("year");
             $table->timestamps();
         });
     }

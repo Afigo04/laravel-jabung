@@ -18,6 +18,9 @@ class GaleryResource extends Resource
     protected static ?string $model = Galery::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Galeri';
+    protected static ?string $navigationGroup = 'Galeri';
+
 
     public static function form(Form $form): Form
     {
@@ -32,6 +35,9 @@ class GaleryResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('photo_path')
+                    ->label("Foto")
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
