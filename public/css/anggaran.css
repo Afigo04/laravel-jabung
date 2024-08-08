@@ -61,7 +61,7 @@ body {
 }
 
 .jumlah-pendapatan {
-    margin: 40px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -95,6 +95,10 @@ body {
 
 .container-belanja-desa {
     background-color: #ededed;
+}
+
+.container-pendapatan-desa {
+    padding-top: 0 !important;
 }
 
 .tabel-belanja-desa {

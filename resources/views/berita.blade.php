@@ -1,81 +1,41 @@
 @include('layouts.header')
 
-<main class="main container pt-4">
-  <section class="mt-5">
-    <h1 class="text-center fs-4">
-      8 Rekomendasi Warung Dawet Jabung Paling Enak di Ponorogo, Wajib Dicoba untuk Jelajahi Cita Rasa yang Otentik
+<main class="main container pt-4 d-flex flex-column flex-lg-row">
+  <section class="mt-5 pb-0 custom-berita">
+    <h1 class="text-left fs-4 fw-medium text-black">
+      {{$news['getNewsById']->title}}
     </h1>
     <div class="mt-4">
-      <blockquote>Senin, 1 Juli 2024, 09:55 WIB</blockquote>
-      <img class="w-100 rounded-2" src="./assets/img/dawet-jabung.jpeg" alt="dawet-jabung" />
+      <div class="d-flex justify-content-between">
+        <blockquote>{{$news['formattedTime']}}</blockquote>
+        <blockquote>Ditulis Oleh: {{$news['getNewsById']->writer}}</blockquote>
+      </div>
+      <img class="w-100 rounded-2" src="{{asset('storage/'.$news['getNewsById']->photo_path)}}" alt="dawet-jabung" />
     </div>
     <div class="d-flex flex-column mt-4 text-bold fw-bold custom-berita">
-      <p>
-        PonorogoNews.com - Ponorogo adalah kota yang tak hanya terkenal dengan kekayaan budaya, tetapi juga
-        menyajikan kenikmatan kuliner yang menggugah selera.
-      </p>
-      <p>
-        Salah satu ikon kuliner yang melekat erat dengan kota ini adalah Dawet Jabung, minuman tradisional yang
-        begitu khas dan lezat.
-      </p>
-      <p>
-        Dalam artikel ini, mari kita menjelajahi warung-warung Dawet Jabung paling enak di Ponorogo yang patut
-        dicoba.
-      </p>
-      <p>Obati Dahaga di Warung Dawet Jabung Paling Enak</p>
-      <p>
-        Melalui artikel ini pula, kita mengajak Anda untuk merasakan kelezatan khas kuliner tradisional yang masih
-        melestarikan cita rasa otentiknya.
-      </p>
-      <p>
-        Sensasi menyegarkan yang mengalir dalam setiap mangkuknya, Dawet Jabung akan membuat para pecinta kuliner
-        melalui petualangan rasa yang penuh warna dan kenikmatan yang tak terlupakan.
-      </p>
-      <p>Langsung saja simak 8 rekomendasi warung Dawet Jabung paling enak di Ponorogo berikut ini!</p>
-      <p>1. Warung Dawet Jabung Bu Sumini</p>
-      <p>
-        Dawet Jabung ala Bu Sumini telah menjadi legenda dan referensi utama bagi penduduk sekitar maupun para
-        penikmat konten kreator kuliner. Warung ini dianggap sebagai pelopor dan telah lama menjadi tempat yang
-        dikenal menjual Dawet Jabung.
-      </p>
-      <p>
-        Terletak di sekitar Perempatan Jabung, Desa Jabung, Mlarak, Ponorogo, usaha Dawet Jabung ini sudah
-        beroperasi sejak tahun 1950-an, diwariskan dari ayah Bu Sumini yang awalnya menjual keliling.
-      </p>
-      <p>Baca Juga: Kapan Bandara Dhoho Kediri Beroperasi Penuh, Kemenhub Berikan Tanggal Pasti</p>
-      <p>
-        Keunggulan Dawet Jabung Bu Sumini tak diragukan lagi. Salah satunya, bahan baku cendolnya berasal dari
-        tepung aren, memberikan tekstur yang lembut dan kenyal. Selain itu, sirupnya terbuat dari gula kelapa asli.
-      </p>
-      <p>
-        Warung Dawet Jabung Bu Sumini buka setiap hari mulai pukul 09.00 hingga 17.00, dengan harga satu mangkok
-        dibanderol seharga Rp 6 ribu.
-      </p>
-      <p>
-        Mampu mempertahankan kualitas dan cita rasa otentik selama bertahun-tahun, Dawet Jabung Bu Sumini tetap
-        menjadi destinasi utama bagi pencinta kuliner tradisional di Ponorogo.
-      </p>
-      <p>2. Warung Dawet Jabung Bu Matun</p>
-      <p>
-        Warung Dawet Jabung Bu Matun terletak di kelurahan Tanam Arum, Kecamatan Ponorogo, yang tepatnya berada di
-        Jalan Jaksa Agung Suprapto.
-      </p>
-      <p>
-        Baca Juga: Rekomendasi Destinasi Utama untuk Habiskan Weekend di Ponorogo bersama Keluarga, Ada di Area
-        Kota!
-      </p>
-      <p>
-        Bu Matun dikenal sebagai salah satu penjual es dawet legendaris yang masih bertahan, telah berdiri sejak
-        tahun 1984 dan tetap eksis hingga saat ini tanpa kehilangan daya tariknya.
-      </p>
-      <p>
-        Warung es dawet ini juga selalu ramai pembeli, dan keunikan lainnya adalah cendol dawetnya berwarna putih,
-        menandakan tidak ada tambahan bahan pewarna.
-      </p>
-      <p>
-        Menikmati es dawet Bu Matun tidak akan membuat kantong terlalu kering, karena harganya sangat terjangkau. Es
-        dawet dibanderol seharga Rp 1.500, sementara jajanan gorengannya tersedia dengan harga Rp 500 perak.
-      </p>
+      {!! $news['getNewsById']->content !!}
+    </div>
+  </section>
+
+  <section class="pt-0 mt-3 container custom-sidebar">
+    <h1 class="text-center fs-2 fw-medium text-black">Berita Lain</h1>
+    <div class="content">
+      <div class="card-grid d-flex flex-column gap-3">
+        @if (empty($news['newsExceptOne']))
+        <div class="card custom-card">
+          <h1 class="fs-3 fw-bold text-white text-center">Tidak Ada Berita</h1>
+        </div>
+        @else
+        @foreach ($news['newsExceptOne'] as $item)
+        <div class="card">
+          <img class="mx-auto" src="{{asset('storage/'.$item->photo_path)}}" alt="Dawet Jabung" />
+          <h2 class="mt-3 text-white fs-4 fw-normal">{{$item->title}}</h2>
+          <a href="{{route('berita.show', ['id' => $item->id])}}" class="button">Selengkapnya ></a>
+        </div>
+        @endforeach
+        @endif
+
+      </div>
     </div>
   </section>
 </main>

@@ -28,6 +28,7 @@ class NewsResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('writer')->name("Penulis")->required(),
+                Forms\Components\TextInput::make('title')->name("Judul")->required(),
                 Forms\Components\FileUpload::make('photo_path')->name('Gambar')->required(),
                 Forms\Components\RichEditor::make('content')->name("Konten")->required(),
             ]);
@@ -38,6 +39,8 @@ class NewsResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('writer')->label("Penulis"),
+                Tables\Columns\TextColumn::make('title')->label("Judul")
+                    ->limit(50),
                 Tables\Columns\TextColumn::make('content')->label("Konten")
                     ->html()
                     ->limit(50),

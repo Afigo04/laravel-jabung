@@ -14,25 +14,28 @@
         <div class="d-flex justify-content-between">
             <div>
                 <h2 style="color: #003d81">Info Grafik APBD</h2>
-                <h2 style="color: #003d81; margin-bottom: 40px;">Realisasi Tahun Anggaran {{$year}}</h2>
+                <h2 style="color: #003d81; margin-bottom: 40px;">Realisasi Tahun Anggaran {{$anggaran['year']}}</h2>
             </div>
             <div class="dropdown">
                 <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Pilih Tahun
                 </button>
                 <ul class="dropdown-menu">
-                    @foreach ($uniqueYear as $year)
-                    <li><a class="dropdown-item" href="{{route('anggaran.year', ['year' => $year])}}">{{$year}}</a></li>
+                    @foreach ($anggaran['listAnggaranYear'] as $year)
+                    <li><a class="dropdown-item" href="{{route('anggaran.show', ['year' => $year])}}">{{$year}}</a></li>
                     @endforeach
                 </ul>
             </div>
         </div>
+
+    </section>
+    <!-- end info grafik Section 2023-->
+
+    <section class="container-pendapatan-desa">
         <h2 style="text-align: center; color: #003d81;">Pendapatan Desa</h2>
-
-
         <div class="parent-container-tabel-anggaran">
             <div class="container-tabel-anggaran gap-3">
-                @foreach ($pendapatanDesa as $finance)
+                @foreach ($anggaran['dataAnggaran']['pendapatanDesa'] as $finance)
                 <div class="tabel-anggaran">
                     <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
                         <h5 class="mb-0">{{$finance->name}}</h5>
@@ -47,39 +50,39 @@
                 <div class="jumlah-pendapatan">
                     <h2>Jumlah Pendapatan</h2>
                     <div class="tabel-jumlah-pendapatan">
-                        <p id="jumlah-pendapatan">Rp. {{number_format($jumlahAnggaran[0])}}</p>
+                        <p id="jumlah-pendapatan">Rp. {{number_format($anggaran['sumAnggaran']['pendapatanDesa'])}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- end info grafik Section 2023-->
-
     <!-- belanja desa section -->
     <section class="container-belanja-desa">
-        <!-- section title -->
-        <div>
-            <h2 style="color: #003d81; text-align: center;">Belanja Desa</h2>
-        </div>
-        <!-- end section title -->
-        <div class="parent-container-tabel-anggaran">
-            <div class="container-tabel-anggaran gap-3">
-                @foreach ($belanjaDesa as $finance)
-                <div class="tabel-anggaran">
-                    <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
-                        <h5 class="mb-0">{{$finance->name}}</h5>
-                    </div>
-                    <div class="py-1 d-flex justify-content-center align-items-center h-70">
-                        <p class="fs-3 mb-0">Rp.{{number_format($finance->amount)}}</p>
-                    </div>
-                </div>
-                @endforeach
+        <div class="container">
+            <!-- section title -->
+            <div>
+                <h2 style="color: #003d81; text-align: center;">Belanja Desa</h2>
             </div>
-            <div class="container-jumlah-pendapatan">
-                <div class="jumlah-pendapatan">
-                    <h2>Jumlah Pendapatan</h2>
-                    <div class="tabel-jumlah-pendapatan">
-                        <p id="jumlah-pendapatan">Rp. {{number_format($jumlahAnggaran[1])}}</p>
+            <!-- end section title -->
+            <div class="parent-container-tabel-anggaran">
+                <div class="container-tabel-anggaran gap-3">
+                    @foreach ($anggaran['dataAnggaran']['belanjaDesa'] as $finance)
+                    <div class="tabel-anggaran">
+                        <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
+                            <h5 class="mb-0">{{$finance->name}}</h5>
+                        </div>
+                        <div class="py-1 d-flex justify-content-center align-items-center h-70">
+                            <p class="fs-3 mb-0">Rp.{{number_format($finance->amount)}}</p>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="container-jumlah-pendapatan">
+                    <div class="jumlah-pendapatan">
+                        <h2>Jumlah Pendapatan</h2>
+                        <div class="tabel-jumlah-pendapatan">
+                            <p id="jumlah-pendapatan">Rp. {{number_format($anggaran['sumAnggaran']['belanjaDesa'])}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,7 +91,7 @@
     <!-- end belanja desa section -->
 
     <!-- pembiyaan desa section -->
-    <section class="container">
+    <section class="container-pembiayaan-desa">
         <!-- section title -->
         <div>
             <h2 style="text-align: center; color: #003d81;">Pembiayaan Desa</h2>
@@ -96,7 +99,7 @@
         <!-- end section title -->
         <div class="parent-container-tabel-anggaran">
             <div class="container-tabel-anggaran gap-3">
-                @foreach ($pembiayaanDesa as $finance)
+                @foreach ($anggaran['dataAnggaran']['pembiayaanDesa'] as $finance)
                 <div class="tabel-anggaran">
                     <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
                         <h5 class="mb-0">{{$finance->name}}</h5>
@@ -111,7 +114,7 @@
                 <div class="jumlah-pendapatan">
                     <h2>Jumlah Pendapatan</h2>
                     <div class="tabel-jumlah-pendapatan">
-                        <p id="jumlah-pendapatan">Rp. {{number_format($jumlahAnggaran[2])}}</p>
+                        <p id="jumlah-pendapatan">Rp. {{number_format($anggaran['sumAnggaran']['pembiayaanDesa'])}}</p>
                     </div>
                 </div>
             </div>
@@ -126,6 +129,9 @@
         <div class="container swiper d-flex justify-content-center">
             <div class="swiper-wrapper">
                 <!-- Slides -->
+                @if($docs->isEmpty())
+                <h1 class="fs-2 text-black text-center fw-bold mx-auto">Dokumen Tidak Ada</h1>
+                @else
                 @foreach ($docs as $doc)
                 <div class="swiper-slide">
                     <a href="{{asset('storage/'.$doc->path)}}" target="_blank" class="pdf-container">
@@ -134,6 +140,7 @@
                     </a>
                 </div>
                 @endforeach
+                @endif
             </div>
         </div>
         <!-- If we need pagination -->

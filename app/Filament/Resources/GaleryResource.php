@@ -27,6 +27,7 @@ class GaleryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('photo_path')
+                    ->label("Foto")
                     ->required()
             ]);
     }
@@ -35,9 +36,12 @@ class GaleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('photo_path')
-                    ->label("Foto")
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('photo_path')->label("Gambar")
+                    ->getStateUsing(function (Galery $record) {
+                        $image = 'storage/' . $record->photo_path;
+                        return asset($image);
+                    })
+                    ->size(50),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

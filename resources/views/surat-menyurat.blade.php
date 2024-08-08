@@ -14,36 +14,18 @@
     <div class="container swiper d-flex justify-content-center">
       <div class="swiper-wrapper">
         <!-- Slides -->
+        @if($berkas->isEmpty())
+        <h1 class="fs-1 text-center text-black fw-bold mx-auto">Dokumen Tidak Ada</h1>
+        @else
+        @foreach ($berkas as $surat)
         <div class="swiper-slide">
-          <a href="#" class="pdf-container">
-            <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-            <p>Akta Kematian</p>
+          <a href="{{asset('storage/'.$surat->path)}}" target="_blank" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p>{{$surat->name}}</p>
           </a>
         </div>
-        <div class="swiper-slide">
-          <a href="#" class="pdf-container">
-            <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-            <p>Akta Kematian</p>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="#" class="pdf-container">
-            <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-            <p>Akta Kematian</p>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="#" class="pdf-container">
-            <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-            <p>Akta Kematian</p>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="#" class="pdf-container">
-            <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-            <p>Akta Kematian</p>
-          </a>
-        </div>
+        @endforeach
+        @endif
       </div>
     </div>
     <!-- If we need pagination -->

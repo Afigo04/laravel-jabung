@@ -20,8 +20,8 @@ class PdfObserver
      */
     public function updated(PdfFile $pdfFile): void
     {
-        if ($pdfFile->isDirty('photo_path')) {
-            Storage::disk('public')->delete($pdfFile->getOriginal('photo_path'));
+        if ($pdfFile->isDirty('path')) {
+            Storage::disk('public')->delete($pdfFile->getOriginal('path'));
         }
     }
 
@@ -30,8 +30,8 @@ class PdfObserver
      */
     public function deleted(PdfFile $pdfFile): void
     {
-        if (!is_null($pdfFile->photo_path)) {
-            Storage::disk('public')->delete($pdfFile->photo_path);
+        if (!is_null($pdfFile->path)) {
+            Storage::disk('public')->delete($pdfFile->path);
         }
     }
 

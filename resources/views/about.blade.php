@@ -1,15 +1,15 @@
 @include('layouts.header')
 <main class="main">
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg)">
+    <div class="page-title dark-background background-dawet">
         <div class="container position-relative">
-            <nav class="breadcrumbs">
+            <nav class="breadcrumbs" style="position: relative; z-index: 9; font-size: 18px;">
                 Ada dua orang yang sama-sama murid dari Kyai Hasan Besari yang terletak di pesantren Desa Tegalsari
                 Kecamatan Jetis kabupaten Ponorogo. Santri tersebut berasal dari keluarga berbeda yaitu santri yang bernama
                 Ki Ageng Morang merupakan utusan dari kerajaan Mataram yang di daulat untuk menggali ilmu dan fenomena agama
                 islam dengan harapan akan di kembangkan di negaranya.
             </nav>
-            <div class="tombol-selengkapnya">
+            <div class="tombol-selengkapnya" style="position: relative; z-index: 9; font-size: 18px;">
                 <a href="{{route('selengkapnya')}}">Selengkapnya</a>
             </div>
         </div>
@@ -67,7 +67,7 @@
     <!-- Stats Counter Section -->
     <section class="section-demografi">
         <!-- Section Title -->
-        <div>
+        <div class="mb-4">
             <h2 style="text-align: center; color: #003d81">Demografi Desa Jabung</h2>
         </div>
         <!-- End Section Title -->
@@ -177,6 +177,62 @@
             </h2>
         </div>
         <!-- End Section Title -->
+        <div class="container swiper">
+            <div class="swiper-bagan-susunan mt-4">
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kepala Desa</p>
+                    <p class="nama-anggota">Budi Ratno</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Sekretaris Desa</p>
+                    <p class="nama-anggota">Eko Budi Prayitno</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kaur Perencanaan</p>
+                    <p class="nama-anggota">Edwin Masriyanto</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kaur Keuangan</p>
+                    <p class="nama-anggota">Anang Mawardi</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kaur Pelayanan</p>
+                    <p class="nama-anggota">Habisma Kartika H.</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kasi Pemerintahan</p>
+                    <p class="nama-anggota">Sumaji</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kasun 1</p>
+                    <p class="nama-anggota">Ebik Tri Purnomo</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kasun 2</p>
+                    <p class="nama-anggota">Slamet Widiarto</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Kasun 3 Siswanto N.P.</p>
+                    <p class="nama-anggota">Budi Ratno</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Staff</p>
+                    <p class="nama-anggota">Abdul Haris K.</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Babinsa</p>
+                    <p class="nama-anggota">Yusuf</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Babinkamtibmas</p>
+                    <p class="nama-anggota">Andik Wijanarko</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="jabatan-anggota">Ketua BPD</p>
+                    <p class="nama-anggota">Wiyardi</p>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
     </section>
     <!-- End Section bagan susunan -->
 
@@ -185,11 +241,53 @@
         <!-- Section Title -->
         <div>
             <h2 style="text-align: center; color: #003d81">
-                Bagan Susunan Organisasi dan Tata Kerja <br />
-                Pemerintah Desa Jabung, Kecamatan Mlarak
+                Kepala Desa yang pernah menjabat di desa jabung
             </h2>
         </div>
         <!-- End Section Title -->
+        <div class="container swiper">
+            <div class="swiper-bagan-susunan mt-4">
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                    <p class="nama-kades">Kromo Hardjo</p>
+                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                </div>
+            </div>
     </section>
     <!-- End Section kepala desa -->
 </main>

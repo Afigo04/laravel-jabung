@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\News;
-use Database\Factories\NewsFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -17,12 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            // FinanceCategorySeeder::class,
-            // PdfCategorySeeder::class,
-            // FinanceSeeder::class
-            PdfFileSeeder::class
+            FinanceCategorySeeder::class,
+            PdfCategorySeeder::class,
+            FinanceSeeder::class,
+            PdfFileSeeder::class,
+            GalerySeeder::class,
+            NewsSeeder::class
         ]);
-
-        // News::factory()->count(10)->create();
     }
 }

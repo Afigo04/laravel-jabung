@@ -16,13 +16,43 @@ class PdfFileSeeder extends Seeder
         // Pendapatan Desa
         DB::table('pdf_files')->insert([
             'name' => "Laporan APBD Tahun 2023",
-            'path' => "Template PROYEK AKHIR KECERDASAN BUATAN.pdf",
+            'path' => "dummyDocs1.pdf",
             'pdf_category_id' => 1
         ]);
         DB::table('pdf_files')->insert([
             'name' => "Laporan APBD Tahun 2024",
-            'path' => "PROYEK AKHIR kecerdasan buatan.pdf",
+            'path' => "dummyDocs2.pdf",
             'pdf_category_id' => 1
+        ]);
+        DB::table('pdf_files')->insert([
+            'name' => "Laporan APBD Tahun 2022",
+            'path' => "dummyDocs3.pdf",
+            'pdf_category_id' => 1
+        ]);
+        DB::table('pdf_files')->insert([
+            'name' => "Laporan APBD Tahun 2021",
+            'path' => "dummyDocs4.pdf",
+            'pdf_category_id' => 1
+        ]);
+        DB::table('pdf_files')->insert([
+            'name' => "Dispensasi",
+            'path' => "dummyDocs5.pdf",
+            'pdf_category_id' => 2
+        ]);
+        DB::table('pdf_files')->insert([
+            'name' => "Makelar",
+            'path' => "dummyDocs6.pdf",
+            'pdf_category_id' => 2
+        ]);
+        DB::table('pdf_files')->insert([
+            'name' => "Tender",
+            'path' => "dummyDocs7.pdf",
+            'pdf_category_id' => 2
+        ]);
+        DB::table('pdf_files')->insert([
+            'name' => "Sak karepmu",
+            'path' => "dummyDocs8.pdf",
+            'pdf_category_id' => 2
         ]);
     }
 }
