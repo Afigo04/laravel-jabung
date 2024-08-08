@@ -20,7 +20,7 @@ Proses ini memakan beberapa waktu untuk menginstall semua dependencies
 
 ## Pindahkan file dummy_data 
 Agar data gambar dan dokumen bisa dilihat, pindahkan atau copy dulu semua data yang ada di `/public/dummy_data` ke `/storage/app/public`. atau nakama bisa mengetikkan perintah berikut di terminal
-> xcopy public\dummy_data\* storage\app\public
+> xcopy public\dummy_data\* storage\app\public /s /e /i
 
 ## Copy file .env.example
 
