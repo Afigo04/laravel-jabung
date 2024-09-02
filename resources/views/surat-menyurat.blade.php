@@ -12,7 +12,7 @@
   <!-- Services Section -->
   <section id="services" class="services section light-background">
     <div class="container swiper d-flex justify-content-center">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper {{ $berkas->count() < 5 ? 'justify-content-center': '' }}">
         <!-- Slides -->
         @if($berkas->isEmpty())
         <h1 class="fs-1 text-center text-black fw-bold mx-auto">Dokumen Tidak Ada</h1>
@@ -21,7 +21,7 @@
         <div class="swiper-slide">
           <a href="{{asset('storage/'.$surat->path)}}" target="_blank" class="pdf-container">
             <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
-            <p>{{$surat->name}}</p>
+            <p class="text-center">{{$surat->name}}</p>
           </a>
         </div>
         @endforeach

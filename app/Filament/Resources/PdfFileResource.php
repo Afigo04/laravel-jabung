@@ -30,7 +30,8 @@ class PdfFileResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('path')
-                    ->label("Berkas"),
+                    ->label("Berkas")
+                    ->acceptedFileTypes(['application/pdf']),
                 Forms\Components\Select::make('pdf_category_id')
                     ->label("Kategori Berkas")
                     ->relationship('pdfCategory', 'name')

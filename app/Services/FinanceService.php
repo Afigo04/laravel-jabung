@@ -26,6 +26,11 @@ class FinanceService
             $query->where("name", "Pembiayaan Desa");
         })->get();
 
+        // get all data that in SILPA Desa category
+        $dataAnggaran['silpaDesa'] = Finance::where("year", $year)->whereHas('category', function ($query) {
+            $query->where("name", "SILPA Desa");
+        })->get();
+
         return $dataAnggaran;
     }
     public function calculateJumlahAnggaran(array $dataAnggaran): array
@@ -38,6 +43,8 @@ class FinanceService
         $jumlahAnggaran['belanjaDesa'] = $dataAnggaran['belanjaDesa']->sum('amount');
         // calculate the sum of all data pembiayaan desa
         $jumlahAnggaran['pembiayaanDesa'] = $dataAnggaran['pembiayaanDesa']->sum('amount');
+        // calculate the sum of all data SILPA desa
+        $jumlahAnggaran['silpaDesa'] = $dataAnggaran['silpaDesa']->sum('amount');
 
         return $jumlahAnggaran;
     }

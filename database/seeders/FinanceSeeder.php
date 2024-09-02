@@ -157,7 +157,7 @@ class FinanceSeeder extends Seeder
             'year' => 2024
         ]);
         DB::table('finances')->insert([
-            'name' => "Penerimaan Pembiayaan / SILPA year 2023",
+            'name' => "Penerimaan Pembiayaan / SILPA Tahun 2023",
             'amount' => 8267709,
             'finance_category_id' => 3,
             'year' => 2024
@@ -165,7 +165,7 @@ class FinanceSeeder extends Seeder
 
         // SILPA
         DB::table('finances')->insert([
-            'name' => "SILPA year Berjalan",
+            'name' => "SILPA Tahun Berjalan",
             'amount' => 8267756,
             'finance_category_id' => 4,
             'year' => 2023

@@ -17,7 +17,7 @@
     <!-- End Page Title -->
 
     <!-- About Section -->
-    <section class="container">
+    <section class="container py-3">
         <h2 style="text-align: center; color: #003d81">Visi Desa Jabung</h2>
         <h4 style="text-align: center">"Mewujudkan Desa Jabung yang Aman, Damai, Adil dan Berbudaya"</h4>
         <p style="text-align: center">
@@ -65,7 +65,7 @@
     <!-- /About Section -->
 
     <!-- Stats Counter Section -->
-    <section class="section-demografi">
+    <section class="section-demografi py-3">
         <!-- Section Title -->
         <div class="mb-4">
             <h2 style="text-align: center; color: #003d81">Demografi Desa Jabung</h2>
@@ -168,7 +168,7 @@
     <!-- /Stats Counter Section -->
 
     <!-- Section bagan susunan -->
-    <section class="bagan-susunan section">
+    <section class="bagan-susunan section py-3">
         <!-- Section Title -->
         <div>
             <h2 style="text-align: center; color: #003d81">
@@ -212,8 +212,8 @@
                     <p class="nama-anggota">Slamet Widiarto</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Kasun 3 Siswanto N.P.</p>
-                    <p class="nama-anggota">Budi Ratno</p>
+                    <p class="jabatan-anggota">Kasun 3 </p>
+                    <p class="nama-anggota">Siswanto N.P.</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
                     <p class="jabatan-anggota">Staff</p>
@@ -237,55 +237,55 @@
     <!-- End Section bagan susunan -->
 
     <!-- Section kepala desa -->
-    <section class="kepala-desa section">
+    <section class="kepala-desa section py-3">
         <!-- Section Title -->
         <div>
             <h2 style="text-align: center; color: #003d81">
-                Kepala Desa yang pernah menjabat di desa jabung
+                Kepala Desa Yang Pernah Menjabat di Desa Jabung
             </h2>
         </div>
         <!-- End Section Title -->
         <div class="container swiper">
             <div class="swiper-bagan-susunan mt-4">
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Kromo Hardjo</p>
+                    <p class="nama-anggota">Periode 1885-1901</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Mulyorejo</p>
+                    <p class="nama-anggota">Periode 1901-1924</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Kabulo</p>
+                    <p class="nama-anggota">Periode 1924-1959</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Waluyo</p>
+                    <p class="nama-anggota">Periode 1959-1969</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Saidi</p>
+                    <p class="nama-anggota">Periode 1969-1979</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Sukatmanto</p>
+                    <p class="nama-anggota">Periode 1979-1989</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Suharto</p>
+                    <p class="nama-anggota">Periode 1989-1999</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Marsuji</p>
+                    <p class="nama-anggota">Periode 1999-2007</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">H. Istiawan Jamal</p>
+                    <p class="nama-anggota">Periode 2007-2013</p>
                 </div>
                 <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="nama-kades">Kromo Hardjo</p>
-                    <p class="periode-kades">Periode Tahun 1885-1901</p>
+                    <p class="jabatan-anggota">Budi Ratno</p>
+                    <p class="nama-anggota">Periode 2013-sekarang</p>
                 </div>
             </div>
     </section>

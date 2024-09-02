@@ -122,6 +122,38 @@
     </section>
     <!-- end pembiayaan data section -->
 
+    <!-- SILPA section -->
+    <section class="container-pembiayaan-desa">
+        <!-- section title -->
+        <div>
+            <h2 style="text-align: center; color: #003d81;">SILPA Desa</h2>
+        </div>
+        <!-- end section title -->
+        <div class="parent-container-tabel-anggaran">
+            <div class="container-tabel-anggaran gap-3">
+                @foreach ($anggaran['dataAnggaran']['silpaDesa'] as $finance)
+                <div class="tabel-anggaran">
+                    <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
+                        <h5 class="mb-0">{{$finance->name}}</h5>
+                    </div>
+                    <div class="py-1 d-flex justify-content-center align-items-center h-70">
+                        <p class="fs-3 mb-0">Rp.{{number_format($finance->amount)}}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="container-jumlah-pendapatan">
+                <div class="jumlah-pendapatan">
+                    <h2>Jumlah Pendapatan</h2>
+                    <div class="tabel-jumlah-pendapatan">
+                        <p id="jumlah-pendapatan">Rp. {{number_format($anggaran['sumAnggaran']['silpaDesa'])}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end SILPA section -->
+
     <!-- APBD desa jabung section -->
     <!-- Services Section -->
     <section id="services" class="services section light-background">

@@ -14,25 +14,40 @@ class GalerySeeder extends Seeder
     public function run(): void
     {
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage6.png",
+            'photo_path' => "dummyImage7.jpg",
         ]);
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage7.png",
+            'photo_path' => "dummyImage8.jpg",
         ]);
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage8.png",
+            'photo_path' => "dummyImage9.jpg",
         ]);
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage9.png",
+            'photo_path' => "dummyImage10.jpg",
         ]);
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage10.png",
+            'photo_path' => "dummyImage11.jpg",
         ]);
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage11.png",
+            'photo_path' => "dummyImage12.jpg",
         ]);
         DB::table('galeries')->insert([
-            'photo_path' => "dummyImage12.png",
+            'photo_path' => "dummyImage13.jpg",
+        ]);
+        DB::table('galeries')->insert([
+            'photo_path' => "dummyImage14.jpg",
+        ]);
+        DB::table('galeries')->insert([
+            'photo_path' => "dummyImage15.jpg",
+        ]);
+        DB::table('galeries')->insert([
+            'photo_path' => "dummyImage16.jpg",
+        ]);
+        DB::table('galeries')->insert([
+            'photo_path' => "dummyImage17.jpg",
+        ]);
+        DB::table('galeries')->insert([
+            'photo_path' => "dummyImage18.jpg",
         ]);
     }
 }

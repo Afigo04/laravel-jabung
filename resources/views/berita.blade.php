@@ -2,18 +2,20 @@
 
 <main class="main container pt-4 d-flex flex-column flex-lg-row">
   <section class="mt-5 pb-0 custom-berita">
-    <h1 class="text-left fs-4 fw-medium text-black">
-      {{$news['getNewsById']->title}}
-    </h1>
-    <div class="mt-4">
-      <div class="d-flex justify-content-between">
-        <blockquote>{{$news['formattedTime']}}</blockquote>
-        <blockquote>Ditulis Oleh: {{$news['getNewsById']->writer}}</blockquote>
+    <div class="w-75 mx-auto">
+      <h1 class="text-left fs-4 fw-medium text-black">
+        {{$news['getNewsById']->title}}
+      </h1>
+      <div class="mt-4">
+        <div class="d-flex justify-content-between">
+          <blockquote>{{$news['formattedTime']}}</blockquote>
+          <blockquote>Ditulis Oleh: {{$news['getNewsById']->writer}}</blockquote>
+        </div>
+        <img class="w-100 rounded-2" src="{{asset('storage/'.$news['getNewsById']->photo_path)}}" alt="dawet-jabung" />
       </div>
-      <img class="w-100 rounded-2" src="{{asset('storage/'.$news['getNewsById']->photo_path)}}" alt="dawet-jabung" />
-    </div>
-    <div class="d-flex flex-column mt-4 text-bold fw-bold custom-berita">
-      {!! $news['getNewsById']->content !!}
+      <div class="d-flex flex-column mt-4 text-bold fw-bold">
+        {!! $news['getNewsById']->content !!}
+      </div>
     </div>
   </section>
 
@@ -27,8 +29,8 @@
         </div>
         @else
         @foreach ($news['newsExceptOne'] as $item)
-        <div class="card">
-          <img class="mx-auto" src="{{asset('storage/'.$item->photo_path)}}" alt="Dawet Jabung" />
+        <div class="card mx-auto">
+          <img class="mx-auto w-100" src="{{asset('storage/'.$item->photo_path)}}" alt="Dawet Jabung" />
           <h2 class="mt-3 text-white fs-4 fw-normal">{{$item->title}}</h2>
           <a href="{{route('berita.show', ['id' => $item->id])}}" class="button">Selengkapnya ></a>
         </div>

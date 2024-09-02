@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Desa Jabung</title>
 
     <!-- Fonts -->
@@ -31,9 +32,9 @@
             <a href="{{route('index')}}" class="custom-navbar">
                 <img src="{{asset('img/logo-ponorogo.png')}}" alt="Logo Ponorogo" />
                 <div class="nama-logo">
-                    <h1 class="sitename">Desa Jabung</h1>
-                    <span style="font-size: 14px">Kec. Mlarak. Kab. Ponorogo</span> <br />
-                    <span style="font-size: 14px">Jawa Timur</span>
+                    <h1 class="sitename fs-4 mb-0">Desa Jabung</h1>
+                    <p class="my-0">Kec. Mlarak. Kab. Ponorogo</p>
+                    <p class="my-0">Jawa Timur</p>
                 </div>
             </a>
             <nav id="navmenu" class="navmenu">

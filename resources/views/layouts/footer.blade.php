@@ -2,20 +2,19 @@
     <div class="container p-4">
         <div class="d-flex flex-column justify-content-center align-items-center gap-2">
             <div class="d-flex gap-3 custom-icon">
-                <a href="#">
+                <a target="_blank" href="dsjabung@gmail.com">
                     <img src="{{asset('img/email-logo.png')}}" alt="email" />
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://www.instagram.com/pemdes_jabung">
                     <img src="{{asset('img/ig-logo.png')}}" alt="logo" />
                 </a>
-                <a href="#">
+                <a target="_blank" href="#">
                     <img src="{{asset('img/fb-logo.png')}}" alt="facebook" />
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://www.youtube.com/@pandhitowesikuning1922?si=B7WDsqRLVstmH6Nm">
                     <img src="{{asset('img/ytb-logo.png')}}" alt="youtube" />
                 </a>
             </div>
-            <p class="text-white text-center mb-0 mt-2">JABUNG.GO.ID</p>
         </div>
         <hr style="border-bottom: 3px solid #fff" />
         <div class="d-flex flex-column gap-1 justify-content-between">

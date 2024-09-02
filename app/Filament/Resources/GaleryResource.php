@@ -28,6 +28,12 @@ class GaleryResource extends Resource
             ->schema([
                 Forms\Components\FileUpload::make('photo_path')
                     ->label("Foto")
+                    ->image()
+                    ->imageResizeMode('force')
+                    ->imageCropAspectRatio('3:2')
+                    ->imageResizeTargetWidth(1200)
+                    ->imageResizeTargetHeight(800)
+                    ->optimize('jpg')
                     ->required()
             ]);
     }

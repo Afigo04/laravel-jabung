@@ -1,55 +1,55 @@
 .background-gunung {
-  background-image: url("../img/Gunung.png");
-  background-position: 50% 30%;
-  position: relative;
-  background-size: cover;
+    background-image: url('../img/Gunung.png');
+    background-position: 50% 30%;
+    position: relative;
+    background-size: cover;
 }
 
 .background-gunung::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 36, 76, 0.2), rgba(0, 61, 129, 0.5));
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 36, 76, 0.2), rgba(0, 61, 129, 0.5));
+    pointer-events: none;
 }
 
 .pdf-container {
-  background: linear-gradient(#003d81, #000d1b);
-  padding: 30px;
-  border-radius: 15px;
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
+    background: linear-gradient(#003d81, #000d1b);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
 }
 
 .pdf-container img {
-  width: 90px;
-  margin-bottom: 10px;
+    width: 90px;
+    margin-bottom: 10px;
 }
 
 .pdf-container p {
-  margin-bottom: 0;
-  color: #fff;
-  font-family: "Poppins", "sans-serif";
+    margin-bottom: 0;
+    color: #fff;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .swiper {
-  max-width: 900px;
+    max-width: 900px;
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-pagination {
-  position: initial !important;
-  margin-top: 10px;
+    position: initial !important;
+    margin-top: 10px;
 }

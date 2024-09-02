@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(ServiceDependencies::class, function($app) {
+        $this->app->singleton(ServiceDependencies::class, function ($app) {
             return new ServiceDependencies(
                 $app->make(FinanceService::class),
                 $app->make(NewsService::class),

@@ -29,7 +29,13 @@ class NewsResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('writer')->name("Penulis")->required(),
                 Forms\Components\TextInput::make('title')->name("Judul")->required(),
-                Forms\Components\FileUpload::make('photo_path')->name('Gambar')->required(),
+                Forms\Components\FileUpload::make('photo_path')->name('Gambar')
+                    ->image()
+                    ->imageResizeMode('force')
+                    ->imageCropAspectRatio('3:2')
+                    ->imageResizeTargetWidth(1200)
+                    ->imageResizeTargetHeight(800)
+                    ->optimize('jpg'),
                 Forms\Components\RichEditor::make('content')->name("Konten")->required(),
             ]);
     }

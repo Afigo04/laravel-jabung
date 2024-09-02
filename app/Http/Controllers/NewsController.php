@@ -34,7 +34,7 @@ class NewsController extends Controller
         }
 
         $getNewsById = $this->newsService->getNewsById($id);
-        $newsExceptOne = $this->newsService->getAllNewsExceptOneId($getNewsById->id);
+        $newsExceptOne = $this->newsService->getAllNewsExceptOneId($getNewsById->id, 10);
         $formattedTime = $this->newsService->formatTimestamp($getNewsById);
 
         $news = [

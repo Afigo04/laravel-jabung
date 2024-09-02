@@ -23,10 +23,10 @@
     </section>
     <!-- /Hero Section -->
     <!-- Get Started Section -->
-    <section id="get-started" class="get-started section">
+    <section id="get-started" class="get-started section py-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 content" data-aos="zoom-out" data-aos-delay="100">
+                <div class="col-lg-12 content pt-0" data-aos="zoom-out" data-aos-delay="100">
                     <div class="header">
                         <div class="header-top">
                             <div class="title-box">
@@ -48,24 +48,6 @@
 
                                 </div>
                             </div>
-                            <div class="menu-box">
-                                <div class="menu">
-                                    <a href="#" class="menu-item">POPULER</a>
-                                    <a href="#" class="menu-item">TERBARU</a>
-                                </div>
-                                <div class="additional-text">
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                    <p>----------------------------------------------------------------------</p>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="content">
@@ -76,7 +58,7 @@
                                 </div>
                                 @else
                                 @foreach ($news['allNewsExceptOne'] as $item)
-                                <div class="card">
+                                <div class="card justify-content-between">
                                     <img src="{{asset('storage/'.$item->photo_path)}}" alt="Dawet Jabung" />
                                     <h2>{{$item->title}}</h2>
                                     <a href="{{route('berita.show', ['id' => $item->id])}}" class="button">Selengkapnya ></a>
@@ -93,7 +75,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="section-title">Surat Menyurat</h2>
+            <h2 class="section-title-custom">Surat Menyurat</h2>
             <div class="pdf-grid">
                 @if ($docs->isEmpty())
                 <h2 class="fs-2 fw-bold text-black">Tidak Ada Dokumen</h2>
@@ -111,7 +93,7 @@
         </div>
     </div>
 
-    <div class="row mt-5 container mx-auto">
+    <div class="row container mx-auto">
         <div class="col-lg-12">
             <h2 class="section-title-custom">Transparansi Anggaran</h2>
             @foreach ($jumlahAnggaran as $tahun => $anggaran)
@@ -141,8 +123,8 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="section-title">Galery</h2>
-            <div class="gallery-grid">
+            <h2 class="section-title-custom mb-3">Galery</h2>
+            <div class="gallery-grid mx-auto">
                 @if ($galeries->isEmpty())
                 <h2 class="fs-2 fw-bold text-black">Tidak Ada Galeri</h2>
                 @else
@@ -151,12 +133,15 @@
                 @endforeach
                 @endif
             </div>
+            <div class="text-center">
+                <a href="{{route('galery')}}" class="more-info-btn mt-4">Selengkapnya ></a>
+            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="section-title">Wilayah Desa Jabung</h2>
+            <h2 class="section-title-custom mb-3">Wilayah Desa Jabung</h2>
             <div class="map-grid">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.7458390152196!2d111.4852305!3d-7.9215947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e790ab7b89963a9%3A0x2583c92c96359f8e!2zQmFsYWkgRGVzYSBKYWJ1bmcgLSDqp4vqpqfqpq3qprvqpqPqprrqprHqppfqpqfqprjqpoE!5e0!3m2!1sid!2sid!4v1722828429800!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
