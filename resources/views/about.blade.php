@@ -106,9 +106,15 @@
                                     <li>Perempuan</li>
                                 </ul>
                                 <ul>
-                                    <li>: 841 KK</li>
-                                    <li>: 1521 Orang</li>
-                                    <li>: 1548 Orang</li>
+                                    @if (count($penduduk)<  3)
+                                    <li>: Data tidak ada</li>
+                                    <li>: Data tidak ada</li>
+                                    <li>: Data tidak ada</li>
+                                    @else
+                                    <li>: {{$penduduk[0]['jumlah_penduduk']}} KK</li>
+                                    <li>: {{$penduduk[1]['jumlah_penduduk']}} orang</li>
+                                    <li>: {{$penduduk[2]['jumlah_penduduk']}} orang</li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
