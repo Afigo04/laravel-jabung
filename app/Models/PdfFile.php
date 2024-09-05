@@ -10,8 +10,6 @@ class PdfFile extends Model
 {
     use HasFactory;
 
-    use HasFactory;
-
     protected $fillable = [
         'name',
         'path',
