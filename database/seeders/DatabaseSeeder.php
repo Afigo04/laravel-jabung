@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             FinanceSeeder::class,
             PdfFileSeeder::class,
             GalerySeeder::class,
-            NewsSeeder::class
+            NewsSeeder::class,
+            PendudukSeeder::class,
         ]);
     }
 }
