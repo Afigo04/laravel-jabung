@@ -21,8 +21,7 @@
             <div class="text-white footer-text">
                 <p class="text-center mb-2 text-white">Jl. Arjuna No. 31, Desa Jabung, Kec. Mlarak, Ponorogo</p>
             </div>
-            <div class="text-white text-center">
-                <a href="https://www.instagram.com/pengoding_tulus?igsh=MWxmZzFkM215Ynk1MQ==">© 2024 Sincere Burch Project </a></div>
+            <div class="text-white text-center">© 2024 Sincere Burch Project</div>
         </div>
     </div>
 </footer>
