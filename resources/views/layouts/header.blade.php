@@ -20,7 +20,10 @@
     <link href="{{asset('css/main.css')}}" rel="stylesheet" />
     <link href="{{asset('css/navbar.css')}}" rel="stylesheet" />
     <link href="{{asset('css/footer.css')}}" rel="stylesheet" />
+    @if (isset($style))
     <link href="{{asset('css/' . $style . '.css') }}" rel="stylesheet">
+    @endif
+
 
     <!-- Swiper -->
     <link href="{{asset('css/swiper/swiper-bundle.min.css')}}" rel="stylesheet" />
@@ -44,7 +47,7 @@
                     <li><a href="{{route('surat.menyurat')}}" class={{request()->is('surat-menyurat*') ? 'active' : '' }}>Surat Menyurat</a></li>
                     <li><a href="{{route('anggaran')}}" class={{request()->is('anggaran*') ? 'active' : '' }}>Anggaran</a></li>
                     <li><a href="{{route('galery')}}" class={{request()->is('galery*') ? 'active' : '' }}>Galery</a></li>
-                    <li><a href="#">Pengaduan</a></li>
+                    <li><a href="{{route('pengaduan')}}" class={{request()->is('pengaduan*') ? 'active' : '' }}>Pengaduan</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

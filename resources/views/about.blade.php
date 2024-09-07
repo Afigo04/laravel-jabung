@@ -179,23 +179,23 @@
         <!-- End Section Title -->
         <div class="container swiper">
             <div class="swiper-bagan-susunan mt-4">
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/budi-ratno.jpg')}}">
                     <p class="jabatan-anggota">Kepala Desa</p>
                     <p class="nama-anggota">Budi Ratno</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/eko-edi-prayitno.jpg')}}">
                     <p class="jabatan-anggota">Sekretaris Desa</p>
                     <p class="nama-anggota">Eko Budi Prayitno</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/edwin-masyiranto.jpg')}}">
                     <p class="jabatan-anggota">Kaur Perencanaan</p>
                     <p class="nama-anggota">Edwin Masriyanto</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/anang-mawardi.jpg')}}">
                     <p class="jabatan-anggota">Kaur Keuangan</p>
                     <p class="nama-anggota">Anang Mawardi</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/habisma-kartika.jpg')}}">
                     <p class="jabatan-anggota">Kaur Pelayanan</p>
                     <p class="nama-anggota">Habisma Kartika H.</p>
                 </div>
@@ -203,19 +203,19 @@
                     <p class="jabatan-anggota">Kasi Pemerintahan</p>
                     <p class="nama-anggota">Sumaji</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/ebik-tri-purnomo.jpg')}}">
                     <p class="jabatan-anggota">Kasun 1</p>
                     <p class="nama-anggota">Ebik Tri Purnomo</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/slamet.jpg')}}">
                     <p class="jabatan-anggota">Kasun 2</p>
                     <p class="nama-anggota">Slamet Widiarto</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/siswanto.jpg')}}">
                     <p class="jabatan-anggota">Kasun 3 </p>
                     <p class="nama-anggota">Siswanto N.P.</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/abdul-haris.jpg')}}">
                     <p class="jabatan-anggota">Staff</p>
                     <p class="nama-anggota">Abdul Haris K.</p>
                 </div>
@@ -227,7 +227,7 @@
                     <p class="jabatan-anggota">Babinkamtibmas</p>
                     <p class="nama-anggota">Andik Wijanarko</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
+                <div class="swiper-anggota"><img src="{{asset('img/wiyardi.jpg')}}">
                     <p class="jabatan-anggota">Ketua BPD</p>
                     <p class="nama-anggota">Wiyardi</p>
                 </div>
@@ -241,52 +241,31 @@
         <!-- Section Title -->
         <div>
             <h2 style="text-align: center; color: #003d81">
-                Kepala Desa Yang Pernah Menjabat di Desa Jabung
+                Susunan BPD Desa Jabung
             </h2>
         </div>
         <!-- End Section Title -->
         <div class="container swiper">
             <div class="swiper-bagan-susunan mt-4">
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Kromo Hardjo</p>
-                    <p class="nama-anggota">Periode 1885-1901</p>
+                <div class="swiper-anggota"><img src="{{asset('img/etriana.jpg')}}">
+                    <p class="jabatan-anggota">Etriana</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Mulyorejo</p>
-                    <p class="nama-anggota">Periode 1901-1924</p>
+                <div class="swiper-anggota"><img src="{{asset('img/kasyono.jpg')}}">
+                    <p class="jabatan-anggota">Kasyono</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Kabulo</p>
-                    <p class="nama-anggota">Periode 1924-1959</p>
+                <div class="swiper-anggota"><img src="{{asset('img/muhson.jpg')}}">
+                    <p class="jabatan-anggota">Muhson</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Waluyo</p>
-                    <p class="nama-anggota">Periode 1959-1969</p>
+                <div class="swiper-anggota"><img src="{{asset('img/suryanto.jpg')}}">
+                    <p class="jabatan-anggota">Suryanto</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Saidi</p>
-                    <p class="nama-anggota">Periode 1969-1979</p>
+                <div class="swiper-anggota"><img src="{{asset('img/tri-andika.jpg')}}">
+                    <p class="jabatan-anggota">Tri Andika</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Sukatmanto</p>
-                    <p class="nama-anggota">Periode 1979-1989</p>
+                <div class="swiper-anggota"><img src="{{asset('img/damar-rofian.jpg')}}">
+                    <p class="jabatan-anggota">Damar Rofian</p>
                 </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Suharto</p>
-                    <p class="nama-anggota">Periode 1989-1999</p>
-                </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Marsuji</p>
-                    <p class="nama-anggota">Periode 1999-2007</p>
-                </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">H. Istiawan Jamal</p>
-                    <p class="nama-anggota">Periode 2007-2013</p>
-                </div>
-                <div class="swiper-anggota"><img src="{{asset('img/profil.png')}}">
-                    <p class="jabatan-anggota">Budi Ratno</p>
-                    <p class="nama-anggota">Periode 2013-sekarang</p>
-                </div>
+
             </div>
     </section>
     <!-- End Section kepala desa -->

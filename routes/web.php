@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BudgetController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\IndexController;
@@ -28,3 +29,7 @@ Route::get('/galery', [GaleryController::class, 'showGaleryPage'])->name("galery
 // Berita Route
 Route::get('/berita', [NewsController::class, 'redirectToNews'])->name("berita");
 Route::get('/berita/{id}', [NewsController::class, 'show'])->name("berita.show");
+
+// Pengaduan route
+Route::get('/pengaduan', [ContactController::class, 'showPengaduan'])->name('pengaduan');
+Route::post('/pengaduan/kirim', [ContactController::class, 'sendWelcomeEmail'])->name('pengaduan.send');
