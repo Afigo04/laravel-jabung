@@ -67,14 +67,14 @@
                         <img src="{{asset('img/ytb-logo.png')}}" alt="youtube" />
                     </a>
                 </div>
-                <p class="text-white text-center mb-0 mt-2">JABUNG.GO.ID</p>
+                <p class="text-white text-center mb-0 mt-2"></p>
             </div>
             <hr style="border-bottom: 3px solid #fff" />
             <div class="d-flex flex-column gap-1 justify-content-between">
                 <div class="text-white footer-text">
-                    <p class="text-center mb-2 text-white">Jl. Nama Jalan no jalan, Ponorogo, Jawa Timur, Indonesia</p>
+                    <p class="text-center mb-2 text-white">Jl. Arjuna No. 31, Desa Jabung, Kec. Mlarak, Ponorogo</p>
                 </div>
-                <div class="text-white text-center">© 2024 Dinas Komunikasi, Informasi dan Statistik Desa Jabung</div>
+                <div class="text-white text-center">© 2024 Sincere Burch Project</div>
             </div>
         </div>
     </footer>
