@@ -12,20 +12,32 @@
   <!-- Services Section -->
   <section id="services" class="services section light-background">
     <div class="container swiper d-flex justify-content-center">
-      <div class="swiper-wrapper {{ $berkas->count() < 5 ? 'justify-content-center': '' }}">
+      <div class="swiper-wrapper justify-content-center">
         <!-- Slides -->
-        @if($berkas->isEmpty())
-        <h1 class="fs-1 text-center text-black fw-bold mx-auto">Dokumen Tidak Ada</h1>
-        @else
-        @foreach ($berkas as $surat)
         <div class="swiper-slide">
-          <a href="{{asset('storage/'.$surat->path)}}" target="_blank" class="pdf-container">
+          <a href="{{route('surat.menyurat.skk')}}" class="pdf-container">
             <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
-            <p class="text-center">{{$surat->name}}</p>
+            <p class="text-center">Surat Keterangan Kehilangan</p>
           </a>
         </div>
-        @endforeach
-        @endif
+        <div class="swiper-slide">
+          <a href="{{route('surat.menyurat.sku')}}" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p class="text-center">Surat Keterangan Usaha</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="{{route('surat.menyurat.skd')}}" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p class="text-center">Surat Keterangan Domisili</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="{{route('surat.menyurat.spl')}}" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p class="text-center">Surat <br/> Perizinan <br /> Solar</p>
+          </a>
+        </div>
       </div>
     </div>
     <!-- If we need pagination -->

@@ -39,6 +39,5 @@ class AppServiceProvider extends ServiceProvider
     {
         News::observe(NewsObserver::class);
         Galery::observe(GaleryObserver::class);
-        PdfFile::observe(PdfObserver::class);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DTOs\ServiceDependencies;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Log;
 
 class IndexController extends Controller
@@ -30,9 +31,6 @@ class IndexController extends Controller
             $news['allNewsExceptOne'] = $this->newsService->getAllNewsExceptOneId($firstNews->id);
         }
 
-        // query for retrieving document penyuratan
-        $docs = $this->documentService->getDocsByCategory("Penyuratan", 2);
-
         // query for retrieving budget data 
         $jumlahAnggaran = [];
         $jumlahAnggaran['2023'] = $this->financeService->calculateJumlahAnggaran(
@@ -45,6 +43,6 @@ class IndexController extends Controller
         // query for retrieving galery 
         $galeries = $this->galeryService->getGaleries(6);
 
-        return view('index', ['style' => 'index', 'news' => $news, 'docs' => $docs, 'jumlahAnggaran' => $jumlahAnggaran, 'galeries' => $galeries]);
+        return view('index', ['style' => 'index', 'news' => $news, 'jumlahAnggaran' => $jumlahAnggaran, 'galeries' => $galeries]);
     }
 }

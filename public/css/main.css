@@ -2863,3 +2863,7 @@ section,
     color: color-mix(in srgb, var(--default-color), transparent 60%);
     font-size: 14px;
 }
+
+.custom-error {
+    margin-top: 100px;
+}

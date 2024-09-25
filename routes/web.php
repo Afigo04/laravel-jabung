@@ -18,6 +18,11 @@ Route::get('/about/selengkapnya', [AboutController::class, 'showSelengkapnyaPage
 
 // Document Route
 Route::get('/surat-menyurat', [DocumentController::class, 'showSuratMenyurat'])->name("surat.menyurat");
+Route::get('/surat-menyurat/skk', [DocumentController::class, 'showSuratKehilangan'])->name("surat.menyurat.skk");
+Route::get('/surat-menyurat/sku', [DocumentController::class, 'showSuratUsaha'])->name("surat.menyurat.sku");
+Route::get('/surat-menyurat/skd', [DocumentController::class, 'showSuratDomisili'])->name("surat.menyurat.skd");
+Route::get('/surat-menyurat/spl', [DocumentController::class, 'showSuratSolar'])->name("surat.menyurat.spl");
+Route::post('/surat-menyurat/skk', [DocumentController::class, 'createKehilangan'])->name("surat.menyurat.skk.create");
 
 // Budget Route
 Route::get('/anggaran/{year}', [BudgetController::class, 'viewAnggaranYearly'])->name("anggaran.show");
