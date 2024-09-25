@@ -77,15 +77,14 @@
         <div class="col-lg-12">
             <h2 class="section-title-custom">Surat Menyurat</h2>
             <div class="pdf-grid">
-                @if ($docs->isEmpty())
-                <h2 class="fs-2 fw-bold text-black">Tidak Ada Dokumen</h2>
-                @endif
-                @foreach ($docs as $doc)
-                <a href="{{asset('storage/'.$doc->path)}}" target="_blank" class="pdf-card">
-                    <img src="{{asset('img/pdf-icon.png')}}" alt="{{$doc->name}}" />
-                    <h2>{{$doc->name}}</h2>
+                <a href="{{route('surat.menyurat.sku')}}" class="pdf-container">
+                    <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+                    <p class="text-center">Surat Keterangan Usaha</p>
                 </a>
-                @endforeach
+                <a href="{{route('surat.menyurat.skd')}}" class="pdf-container">
+                    <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+                    <p class="text-center">Surat Keterangan Domisili</p>
+                </a>
             </div>
         </div>
         <div class="text-center">
