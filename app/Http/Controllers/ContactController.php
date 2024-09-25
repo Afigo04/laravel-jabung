@@ -20,7 +20,7 @@ class ContactController extends Controller
         try {
             $mailData = $request->validated();
             Mail::to('dsjabung@gmail.com')->send(new SendEmail($mailData));
-            return redirect()->route('pengaduan')->with(["success" => "Email berhasil dikirim"]);
+            return redirect()->route('pengaduan')->with(["success" => "Pesan berhasil dikirim"]);
         } catch (ValidationException $e) {
             return redirect()->route('pengaduan', ['style' => "pengaduan"])->withErrors(["errors" => $e->getMessage()]);
         }
