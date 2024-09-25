@@ -7,6 +7,7 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Route;
 
 // Index Routes
@@ -33,3 +34,6 @@ Route::get('/berita/{id}', [NewsController::class, 'show'])->name("berita.show")
 // Pengaduan route
 Route::get('/pengaduan', [ContactController::class, 'showPengaduan'])->name('pengaduan');
 Route::post('/pengaduan/kirim', [ContactController::class, 'sendWelcomeEmail'])->name('pengaduan.send');
+
+Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
+Route::get('/view-pdf', [PDFController::class, 'viewPDF']);
