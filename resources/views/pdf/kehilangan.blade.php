@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{$data['nama']}}</title>
+    <title>{{$data['nama_lengkap']}}_{{$data['nik']}}</title>
 </head>
 <style>
     p {
@@ -9,6 +9,10 @@
     }
     pre {
         margin: 0.2rem;
+    }
+    .min-width-23 {
+        display: inline-block;
+        min-width: 23px; /* Minimum width of 23 pixels */
     }
 </style>
 <body>
@@ -31,7 +35,7 @@
             SURAT KETERANGAN
         </p>
         <p style="margin-top: 0">
-            Nomor : 407/{{$data['nomor_sk']}}/405.29.08.10/2024
+            Nomor : 407/<span class="{{ empty($data['nomor_sk']) ? 'min-width-23' : '' }}">{{ $data['nomor_sk'] ?? '' }}</span>/405.29.08.10/{{date('Y')}}
         </p>
     </div>
 
@@ -50,7 +54,7 @@
         <td></td>
         <td></td>
         <td>:</td>
-        <td>{{$data['nama']}}</td>
+        <td>{{$data['nama_lengkap']}}</td>
     </tr>
     <tr>
         <td>NIK</td>
@@ -129,7 +133,7 @@
     </div>
 
     <div style="margin-top: 1rem; text-align: justify;">
-        <p>Menerangkan bahwa orang tersebut diatas telah kehilangan Handphone atas nama {{$data['nama']}} NIK: {{$data['nik']}} NKK: {{$data['nkk']}} diketahui hilang pada hari/tanggal {{$data['tgl_hilang']}} Waktu Pukul: {{$data['wkt_hilang']}} WIB. Di {{$data['tmp_hilang']}}. Surat keterangan ini digunakan untuk {{$data['keperluan']}}</p>
+        <p>Menerangkan bahwa orang tersebut diatas telah kehilangan {{ $data['barang_hilang'] ?? '..............................' }} atas nama {{ $data['nama_lengkap'] ?? '..............................' }} NIK: {{ $data['nik'] ?? '..............................' }} NKK:  {{ $data['nkk'] ?? '..............................' }} diketahui hilang pada hari/tanggal {{ $data['tanggal_hilang'] ?? '..............................' }} Waktu Pukul: {{ $data['waktu_hilang'] ?? '..............................' }} WIB. Di {{ $data['tempat_hilang'] ?? '..............................' }}. Surat keterangan ini digunakan untuk  {{ $data['keperluan'] ?? '..............................' }}</p>
     </div>
 
     <div style="margin-top: 1.5rem;">
@@ -138,8 +142,8 @@
 
     <div style="margin-top:3rem; position: relative">
         <div style="position: absolute; right: 5rem">
-            <p>Jabung, {{$data['tgl_surat']}}</p>
-            <div style="text-align: center; margin-top: 1rem">
+        <p>Jabung, {{ \Carbon\Carbon::parse($data->updated_at)->locale('id')->translatedFormat('d F Y') }}</p>
+        <div style="text-align: center; margin-top: 1rem">
                 <p>Mengetahui,</p>
                 <p style="margin-bottom: 4rem">Kepala Desa Jabung</p>
                 <p style="text-decoration: underline">Budi Ratno</p>
@@ -148,7 +152,7 @@
         <div style="position: absolute; left: 5rem; top: 2.7rem">
         <div style="text-align: center; margin-top: 1rem">
                 <p style="margin-bottom: 4rem">Pemohon</p>
-                <p style="text-decoration: underline">{{$data['nama']}}</p>
+                <p style="text-decoration: underline">{{$data['nama_lengkap']}}</p>
             </div>
         </div>
     </div>

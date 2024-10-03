@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PDFAnggaran;
 use App\Services\DocumentService;
 use App\Services\FinanceService;
 use Illuminate\Database\Eloquent\Collection;
@@ -42,7 +43,7 @@ class BudgetController extends Controller
         ];
 
         // get the pendapatan documents
-        $docs = Collection::make();
+        $docs = PDFAnggaran::all();
 
         return view('anggaran', ['style' => 'anggaran', 'anggaran' => $anggaran, 'docs' => $docs]);
     }

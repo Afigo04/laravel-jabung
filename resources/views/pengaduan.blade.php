@@ -26,7 +26,7 @@
     </x-hero-gunung>
 
     <div class="custom-row container justify-content-center p-5">
-        <form action="pengaduan/kirim" method="post" id="pengaduan">
+        <form action="pengaduan/kirim" method="post" id="submitOnce">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
@@ -36,12 +36,12 @@
                 <label for="message" class="form-label">Pesan Pengaduan</label>
                 <textarea minlength="10" class="form-control" id="message" name="message" required rows="3"></textarea>
             </div>
-            <button type="submit" id="btn-pengaduan">
+            <button type="submit" id="btn-submitOnce">
                 <a class="more-info-btn">Kirim</a>
             </button>
         </form>
     </div>
-</main>
 
-<script src="{{asset('js/pengaduan.js')}}"></script>
+</main>
+<script src="{{asset('js/submitButtonOnce.js')}}"></script>
 @include('layouts.footer')

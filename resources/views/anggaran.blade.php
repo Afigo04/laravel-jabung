@@ -166,9 +166,9 @@
                 @else
                 @foreach ($docs as $doc)
                 <div class="swiper-slide">
-                    <a href="{{asset('storage/'.$doc->path)}}" target="_blank" class="pdf-container">
+                    <a href="{{asset('storage/'.$doc->file_path)}}" target="_blank" class="pdf-container text-center">
                         <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-                        <p>{{$doc->name}}</p>
+                        <p>{{$doc->nama}}</p>
                     </a>
                 </div>
                 @endforeach

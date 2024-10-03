@@ -53,3 +53,28 @@
     position: initial !important;
     margin-top: 10px;
 }
+
+.more-info-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #001f3f, #004080); /* Navy blue gradient background */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+.alert-custom {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+}

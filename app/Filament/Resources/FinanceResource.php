@@ -20,8 +20,9 @@ class FinanceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
-    protected static ?string $navigationLabel = 'Pendapatan';
-    protected static ?string $navigationGroup = 'Pendapatan';
+    protected static ?string $navigationLabel = 'Anggaran';
+    protected static ?string $navigationGroup = 'Data Anggaran';
+    protected static ?int $navigationSort = 5;
 
 
     public static function form(Form $form): Form

@@ -1,10 +1,10 @@
-const form = document.getElementById('pengaduan');
-const button = document.getElementById('btn-pengaduan')
+const form = document.getElementById('submitOnce');
+const button = document.getElementById('btn-submitOnce')
 
 form.addEventListener('submit', function(event) {
     if (this.classList.contains('submitted')) {
         event.preventDefault(); // Prevent form submission if already submitted
-        console.log("Hallo")
+        console.log("Already submit, try again later")
     } else {
         button.ariaDisabled = true
 

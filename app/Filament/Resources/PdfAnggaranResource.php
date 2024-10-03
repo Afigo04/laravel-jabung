@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\GaleryResource\Pages;
-use App\Filament\Resources\GaleryResource\RelationManagers;
-use App\Models\Galery;
+use App\Filament\Resources\PdfAnggaranResource\Pages;
+use App\Filament\Resources\PdfAnggaranResource\RelationManagers;
+use App\Models\PdfAnggaran;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,28 +13,23 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class GaleryResource extends Resource
+class PdfAnggaranResource extends Resource
 {
-    protected static ?string $model = Galery::class;
+    protected static ?string $model = PdfAnggaran::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationLabel = 'Galeri';
-    protected static ?string $navigationGroup = 'Galeri';
-    protected static ?int $navigationSort = 4;
-
+    protected static ?string $pluralModelLabel = "PDF Anggaran";
+    protected static ?string $navigationLabel = 'PDF Anggaran';
+    protected static ?string $navigationGroup = 'Data Anggaran';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('photo_path')
-                    ->label("Foto")
-                    ->image()
-                    ->imageResizeMode('force')
-                    ->imageCropAspectRatio('3:2')
-                    ->imageResizeTargetWidth(1200)
-                    ->imageResizeTargetHeight(800)
-                    ->optimize('jpg')
+                Forms\Components\TextInput::make('nama')
+                    ->required()
+                    ->maxLength(50),
+                Forms\Components\FileUpload::make('file_path')
                     ->required()
             ]);
     }
@@ -43,12 +38,8 @@ class GaleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('photo_path')->label("Gambar")
-                    ->getStateUsing(function (Galery $record) {
-                        $image = 'storage/' . $record->photo_path;
-                        return asset($image);
-                    })
-                    ->size(50),
+                Tables\Columns\TextColumn::make('nama')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -81,8 +72,8 @@ class GaleryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListGaleries::route('/'),
-            'edit' => Pages\EditGalery::route('/{record}/edit'),
+            'index' => Pages\ListPdfAnggarans::route('/'),
+            'edit' => Pages\EditPdfAnggaran::route('/{record}/edit'),
         ];
     }
 }

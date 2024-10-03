@@ -1,5 +1,22 @@
 @include('layouts.header')
 
+@if ($message = Session::get('success'))
+<div class="alert alert-primary alert-custom d-flex justify-content-between fixed top-0" role="alert">
+    <div>
+        {{$message}}
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+@elseif ($message = Session::get('errors'))
+<div class="alert alert-danger alert-custom d-flex justify-content-between fixed top-0" role="alert">
+    <div>
+        {{$message}}
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <main class="main">
   <!-- Hero Gunung -->
   <x-hero-gunung title="Surat Menyurat">

@@ -7,7 +7,6 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Route;
 
 // Index Routes
@@ -18,12 +17,17 @@ Route::get('/about', [AboutController::class, 'showAboutPage'])->name("about");
 Route::get('/about/selengkapnya', [AboutController::class, 'showSelengkapnyaPage'])->name("selengkapnya");
 
 // Document Route
-Route::get('/surat-menyurat', [DocumentController::class, 'showSuratMenyurat'])->name("surat.menyurat");
-Route::get('/surat-menyurat/skk', [DocumentController::class, 'showSuratKehilangan'])->name("surat.menyurat.skk");
-Route::get('/surat-menyurat/sku', [DocumentController::class, 'showSuratUsaha'])->name("surat.menyurat.sku");
-Route::get('/surat-menyurat/skd', [DocumentController::class, 'showSuratDomisili'])->name("surat.menyurat.skd");
-Route::get('/surat-menyurat/spl', [DocumentController::class, 'showSuratSolar'])->name("surat.menyurat.spl");
-Route::post('/surat-menyurat/skk', [DocumentController::class, 'createKehilangan'])->name("surat.menyurat.skk.create");
+Route::prefix('/surat-menyurat')->group(function () {
+    Route::get('/', [DocumentController::class, 'showSuratMenyurat'])->name("surat.menyurat");
+    Route::get('/skk', [DocumentController::class, 'showSuratKehilangan'])->name("surat.menyurat.skk");
+    Route::get('/sku', [DocumentController::class, 'showSuratUsaha'])->name("surat.menyurat.sku");
+    Route::get('/skd', [DocumentController::class, 'showSuratDomisili'])->name("surat.menyurat.skd");
+    Route::get('/sps', [DocumentController::class, 'showSuratSolar'])->name("surat.menyurat.spl");
+    Route::get('/generate', [DocumentController::class, 'showPdfSolar'])->name("surat.menyurat.spl");
+    Route::get('/solar', [DocumentController::class, 'showHtmlSolar'])->name("surat.menyurat.spl");
+    Route::post('/send', [DocumentController::class, 'sendSurat'])->name('surat.menyurat.send');
+});
+Route::get('/download-pdf/{nik}/{typeDoc?}',  [DocumentController::class, 'downloadPDF'])->name('download.surat.pdf');
 
 // Budget Route
 Route::get('/anggaran/{year}', [BudgetController::class, 'viewAnggaranYearly'])->name("anggaran.show");
@@ -39,6 +43,3 @@ Route::get('/berita/{id}', [NewsController::class, 'show'])->name("berita.show")
 // Pengaduan route
 Route::get('/pengaduan', [ContactController::class, 'showPengaduan'])->name('pengaduan');
 Route::post('/pengaduan/kirim', [ContactController::class, 'sendWelcomeEmail'])->name('pengaduan.send');
-
-Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
-Route::get('/view-pdf', [PDFController::class, 'viewPDF']);
