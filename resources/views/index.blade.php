@@ -129,10 +129,15 @@
                 <h2 class="fs-2 fw-bold text-black">Tidak Ada Galeri</h2>
                 @else
                 @foreach ($galeries as $galery)
-                <img src="{{asset('storage/'.$galery->photo_path)}}" alt="Galeri Jabung">
+                <img src="{{asset('storage/'.$galery->photo_path)}}" alt="{{$galery->caption}}" class="myImg">
                 @endforeach
                 @endif
             </div>
+            <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01" style="width:100%">
+                    <div id="caption"></div>
+                </div>
             <div class="text-center">
                 <a href="{{route('galery')}}" class="more-info-btn mt-4">Selengkapnya ></a>
             </div>

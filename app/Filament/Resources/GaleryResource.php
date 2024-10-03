@@ -34,7 +34,11 @@ class GaleryResource extends Resource
                     ->imageResizeTargetWidth(1200)
                     ->imageResizeTargetHeight(800)
                     ->optimize('jpg')
+                    ->required(),
+                Forms\Components\TextInput::make('caption')
+                    ->label("Caption")
                     ->required()
+                    ->maxLength(255)
             ]);
     }
 
@@ -56,6 +60,9 @@ class GaleryResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('caption')
+                    ->label("Caption")
+                    ->searchable()
             ])
             ->filters([
                 //
