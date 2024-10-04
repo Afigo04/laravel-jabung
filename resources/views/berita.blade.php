@@ -7,7 +7,7 @@
         {{$news['getNewsById']->title}}
       </h1>
       <div class="mt-4">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column text-end justify-content-between flex-sm-row">
           <blockquote>{{$news['formattedTime']}}</blockquote>
           <blockquote>Ditulis Oleh: {{$news['getNewsById']->writer}}</blockquote>
         </div>

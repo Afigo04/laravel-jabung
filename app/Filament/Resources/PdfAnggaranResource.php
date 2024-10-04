@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PdfFileResource\Pages;
-use App\Filament\Resources\PdfFileResource\RelationManagers;
-use App\Models\PdfFile;
+use App\Filament\Resources\PdfAnggaranResource\Pages;
+use App\Filament\Resources\PdfAnggaranResource\RelationManagers;
+use App\Models\PdfAnggaran;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,30 +13,24 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PdfFileResource extends Resource
+class PdfAnggaranResource extends Resource
 {
-    protected static ?string $model = PdfFile::class;
+    protected static ?string $model = PdfAnggaran::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationLabel = 'Berkas';
-    protected static ?string $navigationGroup = 'Dokumen';
+    protected static ?string $pluralModelLabel = "PDF Anggaran";
+    protected static ?string $navigationLabel = 'PDF Anggaran';
+    protected static ?string $navigationGroup = 'Data Anggaran';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->label("Nama")
+                Forms\Components\TextInput::make('nama')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\FileUpload::make('path')
-                    ->label("Berkas")
-                    ->acceptedFileTypes(['application/pdf']),
-                Forms\Components\Select::make('pdf_category_id')
-                    ->label("Kategori Berkas")
-                    ->relationship('pdfCategory', 'name')
-                    ->required(),
-
+                    ->maxLength(50),
+                Forms\Components\FileUpload::make('file_path')
+                    ->required()
             ]);
     }
 
@@ -44,16 +38,8 @@ class PdfFileResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->label("Nama")
+                Tables\Columns\TextColumn::make('nama')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('path')
-                    ->label("Berkas")
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('pdfCategory.name')
-                    ->label("Kategori Berkas")
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -86,9 +72,8 @@ class PdfFileResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPdfFiles::route('/'),
-            'create' => Pages\CreatePdfFile::route('/create'),
-            'edit' => Pages\EditPdfFile::route('/{record}/edit'),
+            'index' => Pages\ListPdfAnggarans::route('/'),
+            'edit' => Pages\EditPdfAnggaran::route('/{record}/edit'),
         ];
     }
 }

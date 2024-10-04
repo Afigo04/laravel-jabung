@@ -20,6 +20,7 @@ class GaleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Galeri';
     protected static ?string $navigationGroup = 'Galeri';
+    protected static ?int $navigationSort = 4;
 
 
     public static function form(Form $form): Form
@@ -88,7 +89,6 @@ class GaleryResource extends Resource
     {
         return [
             'index' => Pages\ListGaleries::route('/'),
-            'create' => Pages\CreateGalery::route('/create'),
             'edit' => Pages\EditGalery::route('/{record}/edit'),
         ];
     }
