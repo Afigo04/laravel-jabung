@@ -34,7 +34,7 @@
     <section class="container-pendapatan-desa">
         <h2 style="text-align: center; color: #003d81;">Pendapatan Desa</h2>
         <div class="parent-container-tabel-anggaran">
-            <div class="container-tabel-anggaran gap-3">
+            <div class="container container-tabel-anggaran gap-3">
                 @foreach ($anggaran['dataAnggaran']['pendapatanDesa'] as $finance)
                 <div class="tabel-anggaran">
                     <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
@@ -98,7 +98,7 @@
         </div>
         <!-- end section title -->
         <div class="parent-container-tabel-anggaran">
-            <div class="container-tabel-anggaran gap-3">
+            <div class="container container-tabel-anggaran gap-3">
                 @foreach ($anggaran['dataAnggaran']['pembiayaanDesa'] as $finance)
                 <div class="tabel-anggaran">
                     <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
@@ -130,7 +130,7 @@
         </div>
         <!-- end section title -->
         <div class="parent-container-tabel-anggaran">
-            <div class="container-tabel-anggaran gap-3">
+            <div class="container container-tabel-anggaran gap-3">
                 @foreach ($anggaran['dataAnggaran']['silpaDesa'] as $finance)
                 <div class="tabel-anggaran">
                     <div class="title-tabel-anggaran py-1 d-flex justify-content-center align-items-center h-30">
@@ -166,9 +166,9 @@
                 @else
                 @foreach ($docs as $doc)
                 <div class="swiper-slide">
-                    <a href="{{asset('storage/'.$doc->path)}}" target="_blank" class="pdf-container">
+                    <a href="{{asset('storage/'.$doc->file_path)}}" target="_blank" class="pdf-container text-center">
                         <img src="{{asset('img/pdf-icon.png')}}" alt="" />
-                        <p>{{$doc->name}}</p>
+                        <p>{{$doc->nama}}</p>
                     </a>
                 </div>
                 @endforeach

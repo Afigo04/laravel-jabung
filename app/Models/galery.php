@@ -10,6 +10,7 @@ class Galery extends Model
     use HasFactory;
 
     protected $fillable = [
-        'photo_path'
+        'photo_path',
+        'caption'
     ];
 }

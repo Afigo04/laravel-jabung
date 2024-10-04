@@ -17,9 +17,10 @@ class PendudukResource extends Resource
 {
     protected static ?string $model = Penduduk::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $navigationLabel = 'Penduduk';
     protected static ?string $navigationGroup = 'Jumlah Penduduk';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
@@ -41,22 +42,16 @@ class PendudukResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('tipe_penduduk')
-                    ->label("Tipe Penduduk")
-                    ->searchable(),
+                    ->label("Tipe Penduduk"),
                 Tables\columns\TextColumn::make('jumlah_penduduk')
                     ->label("Jumlah Penduduk")
-                    ->searchable()
+
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
     }
 
@@ -71,8 +66,6 @@ class PendudukResource extends Resource
     {
         return [
             'index' => Pages\ListPenduduks::route('/'),
-            'create' => Pages\CreatePenduduk::route('/create'),
-            'edit' => Pages\EditPenduduk::route('/{record}/edit'),
         ];
     }
 }

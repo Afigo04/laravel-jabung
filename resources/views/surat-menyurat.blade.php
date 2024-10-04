@@ -1,5 +1,22 @@
 @include('layouts.header')
 
+@if ($message = Session::get('success'))
+<div class="alert alert-primary alert-custom d-flex justify-content-between fixed top-0" role="alert">
+    <div>
+        {{$message}}
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+@elseif ($message = Session::get('errors'))
+<div class="alert alert-danger alert-custom d-flex justify-content-between fixed top-0" role="alert">
+    <div>
+        {{$message}}
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <main class="main">
   <!-- Hero Gunung -->
   <x-hero-gunung title="Surat Menyurat">
@@ -12,20 +29,32 @@
   <!-- Services Section -->
   <section id="services" class="services section light-background">
     <div class="container swiper d-flex justify-content-center">
-      <div class="swiper-wrapper {{ $berkas->count() < 5 ? 'justify-content-center': '' }}">
+      <div class="swiper-wrapper justify-content-center">
         <!-- Slides -->
-        @if($berkas->isEmpty())
-        <h1 class="fs-1 text-center text-black fw-bold mx-auto">Dokumen Tidak Ada</h1>
-        @else
-        @foreach ($berkas as $surat)
         <div class="swiper-slide">
-          <a href="{{asset('storage/'.$surat->path)}}" target="_blank" class="pdf-container">
+          <a href="{{route('surat.menyurat.skk')}}" class="pdf-container">
             <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
-            <p class="text-center">{{$surat->name}}</p>
+            <p class="text-center">Surat Keterangan Kehilangan</p>
           </a>
         </div>
-        @endforeach
-        @endif
+        <div class="swiper-slide">
+          <a href="{{route('surat.menyurat.sku')}}" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p class="text-center">Surat Keterangan Usaha</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="{{route('surat.menyurat.skd')}}" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p class="text-center">Surat Keterangan Domisili</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="{{route('surat.menyurat.sps')}}" class="pdf-container">
+            <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
+            <p class="text-center">Surat <br/> Perizinan <br /> Solar</p>
+          </a>
+        </div>
       </div>
     </div>
     <!-- If we need pagination -->
