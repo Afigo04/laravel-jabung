@@ -55,7 +55,7 @@ table {
             SURAT REKOMENDASI PEMBELIAN BBM TERTENTU (JENIS MINYAK SOLAR)
         </p>
         <p style="margin: 0">
-            Nomor : ___/Kades/405.29.08.10/TANI/JBT/____/2024
+            Nomor : {{ $data['nomor_sk'] ?? "____" }}/Kades/405.29.08.10/TANI/JBT/{{ $data['nomor_jbt'] ?? "____" }}/2024
         </p>
     </div>
 
@@ -237,7 +237,7 @@ table {
                 <tr style="border-spacing: 0;">
                     <td style="display: block; line-height: 110%;">5. </td>
                     <td style="text-align: justify; line-height: 110%; padding-left: 8px;">
-                        Jangka waktu pemberlakuan surat rekomendasi sampai dengan tanggal: {{ $data['jangka_waktu'] ?? "" }}
+                        Jangka waktu pemberlakuan surat rekomendasi sampai dengan tanggal: {{ \Carbon\Carbon::parse($data->jangka_waktu)->locale('id')->translatedFormat('d F Y') ?? "" }}
                     </td>
                 </tr>
                 <tr style="border-spacing: 0;">
@@ -283,7 +283,7 @@ table {
     <div style="margin-top:5rem; position: relative; font-size: 0.8rem; padding-bottom: 8rem">
         <div style="position: absolute; right: 5rem;">
             <div style="text-align: center; margin-top: 1rem">
-                <p>Jabung, </p>
+                <p>Jabung, {{ \Carbon\Carbon::parse($data->updated_at)->locale('id')->translatedFormat('d F Y') }}</p>
                 <p style="margin-bottom: 5rem">Kepala Desa Jabung</p>
                 <p style="text-decoration: underline; font-weight:bold">Budi Ratno</p>
             </div>

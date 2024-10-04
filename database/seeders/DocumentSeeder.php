@@ -172,5 +172,32 @@ class DocumentSeeder extends Seeder
             "no_whatsapp" => '089876346754',
             "created_at" => "2024-09-26 01:21:32"
         ]);
+
+        DB::table('documents')->insert([
+            'nama_lengkap' => 'Jalu ganteng',
+            'nik' => '3576447103910005',
+            "alamat" => "Desa Jabung kecamatan Mlarak kabupaten Ponorogo",
+            "nomor_penyalur" => "54.634.17",
+            "lokasi" => "Siman",
+            "document_category_id" => 4,
+            "no_whatsapp" => '089876346754',
+            "created_at" => "2024-09-26 01:21:32",
+            "nomor_jbt" => "128"
+        ]);
+
+        DB::table('documents')->insert([
+            'nama_lengkap' => 'Harto',
+            'nik' => '3576447103910005',
+            "alamat" => "Desa Jabung kecamatan Mlarak kabupaten Ponorogo",
+            "nomor_penyalur" => "54.634.07",
+            "lokasi" => "Jetis",
+            "document_category_id" => 4,
+            "no_whatsapp" => '089876346754',
+            "created_at" => "2024-09-26 01:21:32",
+            "nomor_jbt" => "130"
+        ]);
+
+
+
     }
 }

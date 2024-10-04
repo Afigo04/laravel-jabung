@@ -43,7 +43,8 @@ class Document extends Model
         "berlaku_mulai",
         "nomor_penyalur",
         "lokasi",
-        "jangka_waktu"
+        "jangka_waktu",
+        "nomor_jbt"
     ];
 
     public function category(): BelongsTo 

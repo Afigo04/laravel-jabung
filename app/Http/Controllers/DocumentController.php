@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Document;
 use App\Services\DocumentService;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -78,11 +79,16 @@ class DocumentController extends Controller
             ]);
 
             if(isset($validated['lokasi'])) {
+                $date = Carbon::now();
                 if($validated['lokasi'] == "Jetis") {
                     $validated['nomor_penyalur'] = '54.634.07';
+                    $date->addDays(90);
                 } else if ($validated['lokasi'] == "Siman") {
-                    $validated['nomor_penyalur'] == '54.634.17';
+                    $validated['nomor_penyalur'] = '54.634.17';
+                    $date->addDays(30);
                 }
+
+                $validated['jangka_waktu'] = $date;
             }
     
             Document::query()->insert($validated);

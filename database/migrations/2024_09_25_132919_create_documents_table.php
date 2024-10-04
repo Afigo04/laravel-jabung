@@ -50,6 +50,7 @@ return new class extends Migration
             $table->string("nomor_penyalur", 50)->nullable(true);
             $table->string("lokasi", 50)->nullable(true);
             $table->string("jangka_waktu", 50)->nullable(true);
+            $table->string("nomor_jbt", 10)->nullable(true);
 
             $table->timestamps();
         });

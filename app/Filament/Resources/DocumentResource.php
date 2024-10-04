@@ -103,6 +103,9 @@ class DocumentResource extends Resource
                     ->default(null),
                 Forms\Components\TextInput::make('jangka_waktu')
                     ->maxLength(50)
+                    ->default(null),
+                Forms\Components\TextInput::make('nomor_jbt') 
+                    ->maxLength(10)
                     ->default(null)
             ]);
     }
