@@ -12,96 +12,55 @@
   <!-- Services Section -->
   <section id="services" class="services section light-background">
     <form class="container" action="send" method="post" id="submitOnce">
-    @csrf
+      @csrf
+        <div class="form-container">
+            <div class="mb-3">
+                <h5>SURAT REKOMENDASI PEMBELIAN BBM TERTENTU </h5>
+                <p>(Untuk Keperluan Pembelian  MINYAK SOLAR)</p>
+                <span class="note">* Menunjukkan pertanyaan yang wajib diisi</span>
+            </div>
 
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="name" id="name" class="form-label">Nama Lengkap</label>
-            <input type="text" class="form-control" id="name" name="nama_lengkap" maxlength="50" required>
-        </div>
-        <div class="mb-3 col">
-            <label for="ttl" class="form-label">Tempat, Tanggal Lahir</label>
-            <input type="text" class="form-control" id="ttl" name="ttl" required>
-        </div>
-    </div>
+            <div class="mb-3 col">
+                <label for="name" id="name" class="form-label">Nama Lengkap <span class="note">*</span></label> 
+                <input type="text" class="" id="name" name="nama_lengkap" maxlength="50" required>
+            </div>
+            <div class="mb-3 col">
+                <label for="nik" class="form-label">NIK <span class="note">*</span></label> 
+                <input type="text" class="" id="nik" name="nik" required maxlength="16">
+            </div>
 
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="nik" class="form-label">NIK</label>
-            <input type="text" class="form-control" id="nik" name="nik" required maxlength="16">
-        </div>
-        <div class="mb-3 col">
-            <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
-            <input type="text" class="form-control" id="kewarganegaraan" name="kewarganegaraan" required>
-        </div>
-    </div>
+            <div class="mb-3">
+                <label for="" class="mb-2">Lokasi<span class="note"> *</span></label> 
+                <div class="radio-btn">
+                    <label for="jetis" class="radio-container">
+                        <input type="radio" name="lokasi" value="Jetis" id="jetis"> Jetis
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                
+                <div class="radio-btn">
+                    <label for="siman" class="radio-container">
+                        <input type="radio" name="lokasi" value="Siman" id="siman"> Siman
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="gender" class="form-label">Jenis Kelamin</label>
-            <input type="text" class="form-control" id="gender" name="gender" required>
-        </div>
-        <div class="mb-3 col">
-            <label for="pekerjaan" class="form-label">Pekerjaan</label>
-            <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" required>
-        </div>
-        <div class="mb-3 col">
-            <label for="agama" class="form-label">Agama</label>
-            <input type="text" class="form-control" id="agama" name="agama" required>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="keperluan" class="form-label">Keperluan</label>
-            <input type="text" class="form-control" id="keperluan" name="keperluan" required>
-        </div>
-        <div class="mb-3 col">
-        <label for="alamat" class="form-label">Alamat</label>
-        <input type="text" class="form-control" id="alamat" name="alamat" required>
-    </div>
-    </div>
+            <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat <span class="note">*</span></label> 
+                <textarea class="" id="alamat" name="alamat" placeholder="Isi alamat anda" required></textarea>
+            </div>
 
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="nama_usaha" class="form-label">Nama Usaha</label>
-            <input type="text" class="form-control" id="nama_usaha" name="nama_usaha" required>
-        </div>
-        <div class="mb-3 col">
-            <label for="alamat_usaha" class="form-label">Alamat Usaha</label>
-            <input type="text" class="form-control" id="alamat_usaha" name="alamat_usaha" required>
-        </div>
-    </div>
+            <div class="mb-3">
+                <label for="no_whatsapp" class="form-label">No. Whatsapp <span class="note">*</span></label> 
+                <input type="text" class="" id="no_whatsapp" name="no_whatsapp" maxlength="20">
+            </div>
 
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="jenis_usaha" class="form-label">Jenis Usaha</label>
-            <input type="text" class="form-control" id="jenis_usaha" name="jenis_usaha" required>
+            <input type="text" value="4" hidden name="document_category_id">
+            <button type="submit" id="btn-submitOnce">
+                <a class="more-info-btn">Kirim</a>
+            </button>
         </div>
-        <div class="mb-3 col">
-            <label for="klasifikasi" class="form-label">Klasifikasi</label>
-            <input type="text" class="form-control" id="klasifikasi" name="klasifikasi" required>
-        </div>
-        <div class="mb-3 col">
-            <label for="berlaku_mulai" class="form-label">Berlaku Mulai</label>
-            <input type="text" class="form-control" id="berlaku_mulai" name="berlaku_mulai" required>
-        </div>
-    </div>
-    <div class="row">
-        <div class="mb-3 col">
-            <label for="penanggung_jawab" class="form-label">Penanggung Jawab</label>
-            <input type="text" class="form-control" id="penanggung_jawab" name="penanggung_jawab" required>
-        </div>
-        <div class="mb-3 col">
-            <label for="no_whatsapp" class="form-label">No. Whatsapp</label>
-            <input type="text" class="form-control" id="no_whatsapp" name="no_whatsapp">
-         </div>
-    </div>
-   
-    <input type="text" value="3" hidden name="document_category_id">
-    <button type="submit" id="btn-submitOnce">
-        <a class="more-info-btn">Kirim</a>
-    </button>
     </form>
   </section>
   <!-- /Features Cards Section -->

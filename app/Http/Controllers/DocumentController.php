@@ -36,7 +36,7 @@ class DocumentController extends Controller
     }
     public function showSuratSolar()
     {
-        return view("surat-menyurat.kehilangan", data: ['style' => 'surat-menyurat']);
+        return view("surat-menyurat.solar", data: ['style' => 'surat-menyurat']);
     }
 
     public function sendSurat(Request $request) 
@@ -44,15 +44,15 @@ class DocumentController extends Controller
         try {
             $validated = $request->validate([
                 "nama_lengkap" => "required|string|max:50",
-                "ttl" => "required|string|max:50",
+                "ttl" => "nullable|string|max:50",
                 "nik" => "required|string|max:16",
-                "gender" => "required|string|max:10",
-                "pekerjaan" => "required|string|max:50",
-                "agama" => "required|string|max:50",
+                "gender" => "nullable|string|max:10",
+                "pekerjaan" => "nullable|string|max:50",
+                "agama" => "nullable|string|max:50",
                 "alamat" => "required|string|max:100",
-                "keperluan" => "required|string|max:100",
+                "keperluan" => "nullable|string|max:100",
                 "document_category_id" => "required|string",
-    
+
                 // document kehilangan
                 "nkk" => "nullable|string|max:16",
                 "kewarganegaraan" => "nullable|string|max:50",
@@ -72,9 +72,18 @@ class DocumentController extends Controller
                 "penanggung_jawab" => "nullable|string|max:50",
                 "alamat_usaha" => "nullable|string|max:100",
                 "berlaku_mulai" => "nullable|string|max:50",
+
+                // documen$t solar
+                "lokasi" => "nullable|string|max:50",
             ]);
 
-            // dd($validated);
+            if(isset($validated['lokasi'])) {
+                if($validated['lokasi'] == "Jetis") {
+                    $validated['nomor_penyalur'] = '54.634.07';
+                } else if ($validated['lokasi'] == "Siman") {
+                    $validated['nomor_penyalur'] == '54.634.17';
+                }
+            }
     
             Document::query()->insert($validated);
             return redirect()->route('surat.menyurat')->with(['success' => "Data Berhasil Dikirim"]);
@@ -83,17 +92,11 @@ class DocumentController extends Controller
         }
     }
 
-    
-    public function showPdfSolar()
-    {
-        $data = [];
-        $pdf = Pdf::loadView('pdf.solar', ['data' => $data]);
-        return $pdf->stream();
-    }
-
     public function showHtmlSolar()
     {
-        return view('pdf.solar');
+        return view('pdf.solar', ['data' => [
+            
+        ]]);
     }
 
     public function downloadPdf($id, $typeDocs) 

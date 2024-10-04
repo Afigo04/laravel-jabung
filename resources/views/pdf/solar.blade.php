@@ -283,7 +283,7 @@ table {
     <div style="margin-top:5rem; position: relative; font-size: 0.8rem; padding-bottom: 8rem">
         <div style="position: absolute; right: 5rem;">
             <div style="text-align: center; margin-top: 1rem">
-                <p>Jabung, {{ \Carbon\Carbon::parse($data->updated_at)->locale('id')->translatedFormat('d F Y') }}</p>
+                <p>Jabung, </p>
                 <p style="margin-bottom: 5rem">Kepala Desa Jabung</p>
                 <p style="text-decoration: underline; font-weight:bold">Budi Ratno</p>
             </div>

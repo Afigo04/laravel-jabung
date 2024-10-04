@@ -50,7 +50,7 @@
           </a>
         </div>
         <div class="swiper-slide">
-          <a href="{{route('surat.menyurat.spl')}}" class="pdf-container">
+          <a href="{{route('surat.menyurat.sps')}}" class="pdf-container">
             <img src="{{asset('img/pdf-icon.png')}}" alt="pdf icon" />
             <p class="text-center">Surat <br/> Perizinan <br /> Solar</p>
           </a>
