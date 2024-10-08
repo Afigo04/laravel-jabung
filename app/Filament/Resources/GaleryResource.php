@@ -70,6 +70,7 @@ class GaleryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -89,7 +90,6 @@ class GaleryResource extends Resource
     {
         return [
             'index' => Pages\ListGaleries::route('/'),
-            'edit' => Pages\EditGalery::route('/{record}/edit'),
         ];
     }
 }

@@ -62,7 +62,8 @@ class FinanceResource extends Resource
                     ->label("Kategori Pendapatan")
                     ->sortable(),
                 Tables\Columns\TextColumn::make('year')
-                    ->label("Tahun"),
+                    ->label("Tahun")
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

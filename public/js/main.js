@@ -104,12 +104,14 @@ var img = document.getElementsByClassName('myImg')
 var modalImg = document.getElementById('img01')
 var captionText = document.getElementById('caption')
 
+console.log(img)
+
 for (var i = 0; i < img.length; i++) {
   img[i].onclick = function() {
-  modal.style.display = 'block'
-  modalImg.src = this.src
-  captionText.innerHTML = this.alt
-  console.log("berhasil cuy")
+    modal.style.display = 'block'
+    modalImg.src = this.src
+    captionText.innerHTML = this.alt
+    console.log("berhasil cuy")
   }
 }
 

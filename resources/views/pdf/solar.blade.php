@@ -60,9 +60,9 @@ table {
     </div>
 
     <div style="position: relative">
-        <p style="margin: 0; font-size: 0.8rem">Dasar Hukum :</p>
+        <p style="margin: 0; font-size: 0.9rem">Dasar Hukum :</p>
         <div style="margin-left: 2rem">
-            <table style="width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 0.8rem" cellspacing="0">
+            <table style="width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 0.9rem" cellspacing="0">
                 <tr style="border-spacing: 0;">
                     <td style="display: block; line-height: 110%;">1. </td>
                     <td style="text-align: justify; line-height: 110%; padding-left: 8px">
@@ -82,12 +82,6 @@ table {
                     </td>
                 </tr>
                 <tr style="border-spacing: 0;">
-                    <td style="display: block; line-height: 110%;">3. </td>
-                    <td style="text-align: justify; line-height: 110%; padding-left: 8px">
-                        Peraturan bahan pengatur hilir minyak dan gas bumi nomor 2 tahun 2023 tentang penerbitan surat rekomendasi untuk pembelian jenis bahan bakar minyak tertentu dan jenis bahan bakar khusus penugasan
-                    </td>
-                </tr>
-                <tr style="border-spacing: 0;">
                     <td style="display: block;">4. </td>
                     <td style="text-align: justify; padding-left: 8px">
                         Peraturan bahan pengatur hilir minyak dan gas bumi nomor 2 tahun 2023 tentang penerbitan surat rekomendasi untuk pembelian jenis bahan bakar minyak tertentu dan jenis bahan bakar khusus penugasan   
@@ -97,17 +91,17 @@ table {
         </div>
     </div>
 
-    <p style="margin: 0; font-size: 0.8rem">Dengan ini memberikan rekomendasi kepada :</p>
-    <table style="font-family:'Times New Roman', Times, serif; border-collapse: collapse; border-spacing: 0; font-size: 0.8rem" cellspacing="0">
+    <p style="margin: 0; font-size: 0.9rem">Dengan ini memberikan rekomendasi kepada :</p>
+    <table style="font-family:'Times New Roman', Times, serif; border-collapse: collapse; border-spacing: 0; font-size: 0.9rem" cellspacing="0">
         <tr>
-            <td style="padding: 0; font-size: 0.8rem; vertical-align: baseline;">Nama</td>
+            <td style="padding: 0; font-size: 0.9rem; vertical-align: baseline;">Nama</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td style="padding-left: 1rem">:</td>
-            <td style="font-size: 0.8rem; padding-left: 3px;">{{ $data['nama_lengkap'] ?? "" }}</td>
+            <td style="font-size: 0.9rem; padding-left: 3px;">{{ $data['nama_lengkap'] ?? "" }}</td>
         </tr>
         <tr>
             <td style="padding: 0; vertical-align: baseline;">NIK</td>
@@ -117,53 +111,53 @@ table {
             <td></td>
             <td></td>
             <td style="padding-left: 1rem">:</td>
-            <td style="font-size: 0.8rem; padding-left: 3px;">{{ $data['nik'] ?? "" }}</td>
+            <td style="font-size: 0.9rem; padding-left: 3px;">{{ $data['nik'] ?? "" }}</td>
         </tr>
         <tr>
-            <td style="padding: 0; vertical-align: baseline; font-size: 0.8rem">Alamat</td>
+            <td style="padding: 0; vertical-align: baseline; font-size: 0.9rem">Alamat</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td style="padding-left: 1rem">:</td>
-            <td style="font-size: 0.8rem; padding-left: 3px;">{{ $data['alamat'] ?? "" }}</td>
+            <td style="font-size: 0.9rem; padding-left: 3px;">{{ $data['alamat'] ?? "" }}</td>
         </tr>
         <tr>
-            <td style="padding: 0; vertical-align: baseline; font-size: 0.8rem">Nama Usaha</td>
+            <td style="padding: 0; vertical-align: baseline; font-size: 0.9rem">Nama Usaha</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td style="padding-left: 1rem">:</td>
-            <td style="padding-left: 3px; font-size: 0.8rem">Pertanian</td>
+            <td style="padding-left: 3px; font-size: 0.9rem">Pertanian</td>
         </tr>
         <tr>
-            <td style="padding: 0; vertical-align: baseline; font-size: 0.8rem">Konsumen Usaha</td>
+            <td style="padding: 0; vertical-align: baseline; font-size: 0.9rem">Konsumen Usaha</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td style="padding-left: 1rem">:</td>
-            <td style="padding-left: 3px; font-size: 0.8rem">Usaha Pertanian</td>
+            <td style="padding-left: 3px; font-size: 0.9rem">Usaha Pertanian</td>
         </tr>
         <tr>
-            <td style="padding: 0; vertical-align: baseline; font-size: 0.8rem">Jenis Usaha</td>
+            <td style="padding: 0; vertical-align: baseline; font-size: 0.9rem">Jenis Usaha</td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td style="padding-left: 1rem">:</td>
-            <td style="padding-left: 3px; font-size: 0.8rem">Pertanian</td>
+            <td style="padding-left: 3px; font-size: 0.9rem">Pertanian</td>
         </tr>
     </table>
-    <p style="margin: 0; font-size: 0.8rem"> Berdasarkan hasil Verifikasi dan Evaluasi Perhitungan :</p>
-    <p style="margin: 0; text-align: center; font-size: 0.8rem"> Kebutuhan jenis BBM tertentu yang digunakan untuk sarana sebagai berikut :</p>
+    <p style="margin: 0; font-size: 0.9rem"> Berdasarkan hasil Verifikasi dan Evaluasi Perhitungan :</p>
+    <p style="margin: 0; text-align: center; font-size: 0.9rem"> Kebutuhan jenis BBM tertentu yang digunakan untuk sarana sebagai berikut :</p>
 
-    <table style="font-family:'Times New Roman', Times, serif; font-size: 0.8rem">
+    <table style="font-family:'Times New Roman', Times, serif; font-size: 0.9rem">
         <tr>
             <th style="width: max-content;" class="border">No.</th>
             <th class="border">Jenis Alat</th>
@@ -186,8 +180,8 @@ table {
         </tr>
     </table>
 
-    <p style="margin: 0; font-size: 0.8rem">Diberikan jenis BBM Tertentu (JBT) Jenis Minyak Solar (Gas Oil)</p>
-    <div style="margin-left: 4rem; font-size: 0.8rem">
+    <p style="margin: 0; font-size: 0.9rem">Diberikan jenis BBM Tertentu (JBT) Jenis Minyak Solar (Gas Oil)</p>
+    <div style="margin-left: 4rem; font-size: 0.9rem">
         <table cellspacing="0">
             <tr style="border-spacing: 0;">
                 <td style="display: block">1. </td>
@@ -233,7 +227,7 @@ table {
     </div> 
     
     <div style="margin-left: 2rem">
-            <table style="width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 0.8rem" cellspacing="0">
+            <table style="width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 0.9rem" cellspacing="0">
                 <tr style="border-spacing: 0;">
                     <td style="display: block; line-height: 110%;">5. </td>
                     <td style="text-align: justify; line-height: 110%; padding-left: 8px;">
@@ -280,14 +274,12 @@ table {
     </div>
 
     
-    <div style="margin-top:5rem; position: relative; font-size: 0.8rem; padding-bottom: 8rem">
-        <div style="position: absolute; right: 5rem;">
+    <div style="margin-top:5rem; position: absolute; font-size: 0.9rem; padding-bottom: 8rem; bottom: -8rem; right: 1rem;">
             <div style="text-align: center; margin-top: 1rem">
                 <p>Jabung, {{ \Carbon\Carbon::parse($data->updated_at)->locale('id')->translatedFormat('d F Y') }}</p>
                 <p style="margin-bottom: 5rem">Kepala Desa Jabung</p>
                 <p style="text-decoration: underline; font-weight:bold">Budi Ratno</p>
             </div>
-        </div>
     </div>
 </body>
 </html>

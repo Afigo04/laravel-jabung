@@ -54,6 +54,7 @@ class PdfAnggaranResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -73,7 +74,6 @@ class PdfAnggaranResource extends Resource
     {
         return [
             'index' => Pages\ListPdfAnggarans::route('/'),
-            'edit' => Pages\EditPdfAnggaran::route('/{record}/edit'),
         ];
     }
 }
