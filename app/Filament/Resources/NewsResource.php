@@ -31,6 +31,7 @@ class NewsResource extends Resource
                 Forms\Components\TextInput::make('writer')->name("Penulis")->required(),
                 Forms\Components\TextInput::make('title')->name("Judul")->required(),
                 Forms\Components\FileUpload::make('photo_path')->name('Gambar')
+                    ->required()
                     ->image()
                     ->imageResizeMode('force')
                     ->imageCropAspectRatio('3:2')

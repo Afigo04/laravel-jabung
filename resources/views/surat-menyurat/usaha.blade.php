@@ -31,7 +31,7 @@
 
                 <div class="mb-3 col">
                     <label for="nik" class="form-label">NIK <span class="note">*</span></label>
-                    <input type="text" class="" id="nik" name="nik" required maxlength="16">
+                    <input type="text" class="" id="nik" name="nik" required maxlength="16" minlength="16">
                 </div>
                 <div class="mb-3 col">
                     <label for="kewarganegaraan" class="form-label">Kewarganegaraan <span class="note">*</span></label>
@@ -42,7 +42,7 @@
                     <label for="" class="mb-2">Jenis Kelamin <span class="note">*</span></label>
                     <div class="radio-btn">
                         <label for="laki-laki" class="radio-container">
-                            <input type="radio" name="gender" value="Laki-Laki" id="laki-laki"> Laki-laki
+                            <input type="radio" name="gender" value="Laki-Laki" id="laki-laki" required> Laki-laki
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -61,7 +61,7 @@
 
                 <div class="mb-3">
                         <label for="" class="mb-2">Agama <span class="note">*</span></label> <br>
-                        <select name="agama" id="agama">
+                        <select name="agama" id="agama" required>
                         <option value="" disabled selected>Pilih Agama</option>
                             <option value="Islam">Islam</option>
                             <option value="Kristen">Kristen</option>
@@ -73,11 +73,11 @@
 
                     <div class="mb-3 col">
                         <label for="keperluan" class="form-label">Keperluan <span class="note">*</span></label>
-                        <textarea name="keperluan" id="keperluan" placeholder="Isi keperluan anda"></textarea>
+                        <textarea name="keperluan" id="keperluan" placeholder="Isi keperluan anda" required></textarea>
                     </div>
                     <div class="mb-3 col">
                         <label for="alamat" class="form-label">Alamat <span class="note">*</span></label>
-                        <textarea class="" id="alamat" name="alamat" placeholder="Isi alamat anda"></textarea>
+                        <textarea class="" id="alamat" name="alamat" placeholder="Isi alamat anda" required></textarea>
                     </div>
 
                     <div class="mb-3 col">
@@ -86,7 +86,7 @@
                     </div>
                     <div class="mb-3 col">
                         <label for="alamat_usaha" class="form-label">Alamat Usaha <span class="note">*</span></label>
-                        <textarea class="" id="alamat_usaha" name="alamat_usaha" placeholder="Isi alamat usaha anda"></textarea>
+                        <textarea class="" id="alamat_usaha" name="alamat_usaha" placeholder="Isi alamat usaha anda" required></textarea>
                     </div>
 
                     <div class="mb-3 col">
@@ -108,7 +108,7 @@
                     </div>
                     <div class="mb-3 col">
                         <label for="no_whatsapp" class="form-label">No. Whatsapp <span class="note">*</span></label>
-                        <input type="text" class="" id="no_whatsapp" name="no_whatsapp">
+                        <input type="text" class="" id="no_whatsapp" name="no_whatsapp" required>
                     </div>
                 <input type="text" value="3" hidden name="document_category_id">
                 <button type="submit" id="btn-submitOnce">

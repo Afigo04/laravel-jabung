@@ -74,35 +74,30 @@ class DocumentController extends Controller
                 "alamat_usaha" => "nullable|string|max:100",
                 "berlaku_mulai" => "nullable|string|max:50",
 
-                // documen$t solar
+                // document solar
                 "lokasi" => "nullable|string|max:50",
             ]);
 
             if(isset($validated['lokasi'])) {
                 $date = Carbon::now();
-                if($validated['lokasi'] == "Jetis") {
-                    $validated['nomor_penyalur'] = '54.634.07';
-                    $date->addDays(90);
-                } else if ($validated['lokasi'] == "Siman") {
-                    $validated['nomor_penyalur'] = '54.634.17';
-                    $date->addDays(30);
+                
+                switch($validated['lokasi']) {
+                    case "Jetis" :
+                        $validated['nomor_penyalur'] = '54.634.07';
+                        $date->addDays(90);
+                    case "Siman":
+                        $validated['nomor_penyalur'] = '54.634.17';
+                        $date->addDays(30);
                 }
 
                 $validated['jangka_waktu'] = $date;
             }
     
             Document::query()->insert($validated);
-            return redirect()->route('surat.menyurat')->with(['success' => "Data Berhasil Dikirim"]);
+            return redirect()->route('surat.menyurat')->with(['success' => "Data Berhasil Dikirim, Silahkan hubungi Admin untuk meminta dokumen"]);
         } catch (ValidationException $e) {
             return redirect()->route('surat.menyurat',)->withErrors(["errors" => $e->getMessage()]);
         }
-    }
-
-    public function showHtmlSolar()
-    {
-        return view('pdf.solar', ['data' => [
-            
-        ]]);
     }
 
     public function downloadPdf($id, $typeDocs) 

@@ -23,7 +23,6 @@ Route::prefix('/surat-menyurat')->group(function () {
     Route::get('/sku', [DocumentController::class, 'showSuratUsaha'])->name("surat.menyurat.sku");
     Route::get('/skd', [DocumentController::class, 'showSuratDomisili'])->name("surat.menyurat.skd");
     Route::get('/sps', [DocumentController::class, 'showSuratSolar'])->name("surat.menyurat.sps");
-    Route::get('/solar', [DocumentController::class, 'showHtmlSolar'])->name("surat.menyurat.spl");
     Route::post('/send', [DocumentController::class, 'sendSurat'])->name('surat.menyurat.send');
 });
 Route::get('/download-pdf/{nik}/{typeDoc?}',  [DocumentController::class, 'downloadPDF'])->name('download.surat.pdf');

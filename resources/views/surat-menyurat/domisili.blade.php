@@ -31,7 +31,7 @@
 
             <div class="mb-3 col">
                 <label for="nik" class="form-label">NIK <span class="note">*</span></label>
-                <input type="text" class="" id="nik" name="nik" required maxlength="16">
+                <input type="text" class="" id="nik" name="nik" required maxlength="16" minlength="16">
             </div>
             <div class="mb-3 col">
                 <label for="pekerjaan" class="form-label">Pekerjaan <span class="note">*</span></label>
@@ -40,7 +40,7 @@
 
             <div class="mb-3">
                 <label for="" class="mb-2">Agama <span class="note">*</span></label> 
-                <select name="agama" id="">
+                <select name="agama" id="" required>
                     <option value="" disabled selected>Pilih Agama</option>
                     <option value="Islam">Islam</option>
                     <option value="Kristen">Kristen</option>
@@ -54,7 +54,7 @@
                 <label for="" class="mb-2">Jenis Kelamin <span class="note">*</span></label> 
                 <div class="radio-btn">
                     <label for="laki-laki" class="radio-container">
-                        <input type="radio" name="gender" value="Laki-Laki" id="laki-laki"> Laki-laki
+                        <input type="radio" name="gender" value="Laki-Laki" id="laki-laki" required> Laki-laki
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -71,7 +71,7 @@
                 <label for="" class="mb-2">Status <span class="note">*</span></label> 
                 <div class="radio-btn">
                     <label for="menikah" class="radio-container">
-                        <input type="radio" name="status" value="Menikah" id="menikah"> Menikah
+                        <input type="radio" name="status" value="Menikah" id="menikah" required> Menikah
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -96,7 +96,7 @@
 
             <div class="mb-3">
                 <label for="no_whatsapp" class="form-label">No. Whatsapp <span class="note">*</span></label>
-                <input type="text" class="" id="no_whatsapp" name="no_whatsapp" maxlength="20">
+                <input type="text" class="" id="no_whatsapp" name="no_whatsapp" maxlength="20" required>
             </div>
 
             <input type="text" value="2" hidden name="document_category_id">

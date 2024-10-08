@@ -32,19 +32,19 @@
 
             <div class="mb-3 ">
                 <label for="nik" class="form-label">NIK <span class="note">*</span></label>
-                <input type="text" class="" id="nik" name="nik" required maxlength="16">
+                <input type="text" class="" id="nik" name="nik" required maxlength="16" minlength="16">
             </div>
 
             <div class="mb-3 ">
                 <label for="nkk" class="form-label">NKK <span class="note">*</span></label> 
-                <input type="text" class="" id="nkk" name="nkk" required maxlength="16">
+                <input type="text" class="" id="nkk" name="nkk" required maxlength="16" minlength="16">
             </div>
 
             <div class="mb-3">
                     <label for="" class="mb-2">Jenis Kelamin <span class="note">*</span></label> 
                     <div class="radio-btn">
                         <label for="laki-laki" class="radio-container">
-                            <input type="radio" name="gender" value="laki-laki" id="laki-laki"> Laki-laki
+                            <input type="radio" name="gender" value="laki-laki" id="laki-laki" required> Laki-laki
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -64,7 +64,7 @@
 
             <div class="mb-3">
                     <label for="agama" class="mb-2">Agama <span class="note">*</span></label>  <br>
-                    <select name="agama" id="agama">
+                    <select required name="agama" id="agama">
                         <option value="" disabled selected>Pilih Agama</option>
                         <option value="islam">Islam</option>
                         <option value="kristen">Kristen</option>
@@ -76,8 +76,7 @@
 
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat <span class="note">*</span></label> 
-                <textarea name="alamat" id="alamat" placeholder="Isi alamat anda"></textarea>
-                <!-- <input type="textarea" class="form-control" id="alamat" name="alamat" required> -->
+                <textarea name="alamat" id="alamat" placeholder="Isi alamat anda" required></textarea>
             </div>
 
             <div class="mb-3">
@@ -86,13 +85,12 @@
             </div>
             <div class="mb-3">
                 <label for="keperluan" class="form-label">Keperluan <span class="note">*</span></label> 
-                <textarea name="keperluan" id="keperluan" placeholder="Isi Keperluan Anda"></textarea>
-                <!-- <input type="text" class="form-control" id="keperluan" name="keperluan" required> -->
+                <textarea name="keperluan" id="keperluan" placeholder="Isi Keperluan Anda" required></textarea>
             </div>
 
             <div class="mb-3 ">
                 <label for="tanggal_hilang" class="form-label">Tanggal Hilang <span class="note">*</span></label> 
-                <input type="date" class="" id="tanggal_hilang" name="tanggal_hilang"  required>
+                <input type="date" class="" id="tanggal_hilang" name="tanggal_hilang" required>
             </div>
             <div class="mb-3 ">
                 <label for="barang_hilang" class="form-label">Barang Hilang <span class="note">*</span></label> 
@@ -110,7 +108,7 @@
 
             <div class="mb-3">
                 <label for="no_whatsapp" class="form-label">No. Whatsapp <span class="note">*</span></label> 
-                <input type="text" class="" id="no_whatsapp" name="no_whatsapp">
+                <input type="text" class="" id="no_whatsapp" name="no_whatsapp" required>
             </div>
             <input type="text" value="1" hidden name="document_category_id">
             <button type="submit" id="btn-submitOnce">

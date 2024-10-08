@@ -98,9 +98,11 @@ class DocumentResource extends Resource
                 Forms\Components\TextInput::make('nomor_penyalur')
                     ->maxLength(50)
                     ->default(null),
-                Forms\Components\TextInput::make('lokasi')
-                    ->maxLength(50)
-                    ->default(null),
+                Forms\Components\Select::make('lokasi')
+                    ->options([
+                        "Siman" => "Siman",
+                        "Jetis" => "Jetis"
+                    ]),
                 Forms\Components\TextInput::make('jangka_waktu')
                     ->maxLength(50)
                     ->default(null),
@@ -122,6 +124,8 @@ class DocumentResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('no_whatsapp'),
+                Tables\Columns\TextColumn::make('nomor_jbt')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
